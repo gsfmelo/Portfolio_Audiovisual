@@ -1,56 +1,37 @@
-import './globals.css';
+import "./globals.css";
 
 export const metadata = {
-  title: 'Geovanna Melo | Portfólio',
-  description: 'Realizadora audiovisual e desenvolvedora de sistemas',
+  title: "Geovanna Melo | Editora de Vídeo",
+  description: "Portfólio de Geovanna Melo, realizadora audiovisual e editora de vídeo.",
 };
 
 export default function RootLayout({ children }) {
-  // Criamos os "furos de película" (sprockets) iguais aos do seu HTML
-  const sprockets = Array(20).fill(0);
-
   return (
     <html lang="pt-BR">
-      <head>
-        {/* Importando as suas fontes do Google Fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet" />
-      </head>
-      <body className="antialiased" style={{ fontFamily: "'Instrument Sans', sans-serif" }}>
+      <body className="antialiased flex flex-col min-h-screen">
 
-        {/* MENU DE NAVEGAÇÃO */}
-        <nav className="flex justify-between items-center px-[8vw] py-6 text-xs font-mono text-preto/60 uppercase tracking-widest">
-          <a href="/" className="font-bold text-vinho hover:opacity-70 transition-opacity">Geo.Melo</a>
-          <div className="flex gap-6 hidden sm:flex">
-            <a href="/" className="hover:text-vinho transition-colors">Home</a>
-            <a href="/projetos" className="hover:text-vinho transition-colors">Projetos</a>
-            <a href="/sobre" className="hover:text-vinho transition-colors">Sobre</a>
-            <a href="/contato" className="hover:text-vinho transition-colors">Contato</a>
+        {/* MENU SUPERIOR (NAV) */}
+        <nav className="flex justify-between items-center py-6 px-[8vw] border-b border-preto/15">
+          <div className="font-serif italic text-xl">
+            geovanna <span className="text-vinho">melo</span>
+          </div>
+          <div className="hidden md:flex gap-7 font-mono text-[11px] tracking-[0.05em] uppercase">
+            <a href="/" className="text-preto/55 hover:text-vinho transition-colors">home</a>
+            <a href="/sobre" className="text-preto/55 hover:text-vinho transition-colors">sobre</a>
+            <a href="/projetos" className="text-preto/55 hover:text-vinho transition-colors">projetos</a>
+            <a href="/contato" className="text-preto/55 hover:text-vinho transition-colors">contato</a>
           </div>
         </nav>
 
-        {/* SPROCKETS (Furos da película) - Topo */}
-        <div className="flex justify-between px-6 py-3.5 border-y border-preto/15">
-          {sprockets.map((_, i) => (
-            <span key={i} className="w-2 h-2 rounded-full bg-preto/20"></span>
-          ))}
+        {/* CONTEÚDO DAS PÁGINAS */}
+        <div className="flex-grow">
+          {children}
         </div>
 
-        {/* Aqui é onde o conteúdo de cada página (como a page.js) vai aparecer */}
-        {children}
-
-        {/* SPROCKETS (Furos da película) - Base */}
-        <div className="flex justify-between px-6 py-3.5 border-y border-preto/15">
-          {sprockets.map((_, i) => (
-            <span key={i} className="w-2 h-2 rounded-full bg-preto/20"></span>
-          ))}
-        </div>
-
-        {/* RODAPÉ GERAL */}
-        <footer className="px-[8vw] py-8 flex justify-between font-mono text-[11px] text-preto/50 uppercase tracking-wider">
-          <span>portfólio — sistema claro</span>
-          <span>osso · vinho · âmbar</span>
+        {/* NOVO RODAPÉ (FOOTER) */}
+        <footer className="py-8 px-[8vw] border-t border-preto/15 flex justify-between items-center font-mono text-[11px] text-preto/50 tracking-widest uppercase mt-auto">
+          <span>© 2026 Geovanna Melo</span>
+          <span>Editora de Vídeo & Realizadora</span>
         </footer>
 
       </body>
