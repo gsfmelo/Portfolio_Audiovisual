@@ -30,8 +30,8 @@ export default function Home() {
 
             <h1 className="font-serif font-normal text-[clamp(36px,5vw,64px)] leading-[1.1] tracking-tight text-preto">
               Oi! Sou Geovanna Melo,<br />
-              <i className="font-light italic text-vinho">editora de vídeo</i> &<br />
-              realizadora.
+              <i className="font-light italic text-vinho">realizadora audiovisual</i> &<br />
+              editora de vídeo.
             </h1>
 
             <p className="font-sans text-base text-preto/70 mt-6 max-w-lg leading-relaxed">
@@ -78,7 +78,7 @@ export default function Home() {
           já editei conteúdo para —
         </span>
         <div className="animate-scroll pl-[280px]">
-          {["FALCOR TRAVELS", "CAP ASSESSORIA", "SECRETARIA DE EDUCAÇÃO DO RECIFE", "MISS UNIVERSE PE", "SECRETARIADO DO BRASIL", "PLENO TREINAMENTOS", "FALCOR TRAVELS", "CAP ASSESSORIA", "SECRETARIA DE EDUCAÇÃO DO RECIFE", "MISS UNIVERSE PE", "SECRETARIADO DO BRASIL", "PLENO TREINAMENTOS"].map((cliente, i) => (
+          {["FALCOR TRAVELS", "CAP ASSESSORIA", "SECRETARIA DE EDUCAÇÃO DO RECIFE", "MISS UNIVERSE PE", "SECRETARIADO DO BRASIL", "PLENO TREINAMENTOS", "VIAJAR PARA ITÁLIA", "FALCOR TRAVELS", "CAP ASSESSORIA", "SECRETARIA DE EDUCAÇÃO DO RECIFE", "MISS UNIVERSE PE", "SECRETARIADO DO BRASIL", "PLENO TREINAMENTOS"].map((cliente, i) => (
             <span key={i} className="font-mono text-[13px] text-osso border-r border-osso/20 px-7 whitespace-nowrap">
               {cliente}
             </span>

@@ -12,10 +12,10 @@ export default function Sobre() {
                         Oi, sou <i className="font-light italic text-vinho">Geovanna Melo!</i>
                     </h1>
                     <p className="font-sans text-lg mt-6 text-preto/80 max-w-2xl leading-relaxed">
-                        Editora de vídeo e realizadora audiovisual — conto histórias cortando, roteirizando e dando ritmo a quem precisa ser ouvido.
+                        Realizadora audiovisual e editora de vídeo — conto histórias cortando, roteirizando e dando ritmo a quem precisa ser ouvido.
                     </p>
                     <div className="font-mono text-xs tracking-[0.1em] uppercase text-preto/55 mt-6">
-                        editora de vídeo · realizadora audiovisual · marketing
+                        realizadora audiovisual · editora de vídeo · marketing digital
                     </div>
                 </div>
 
