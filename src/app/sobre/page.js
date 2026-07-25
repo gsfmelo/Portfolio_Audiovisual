@@ -20,7 +20,7 @@ export default function Sobre() {
                 </div>
 
                 {/* ESPAÇO PARA O RETRATO (Direita) */}
-                <div className="aspect-[4/5] bg-osso2 border border-preto/15 relative flex items-center justify-center group overflow-hidden w-full max-w-[280px] mx-auto md:mx-0">
+                <div className="aspect-[4/5] bg-osso2 border border-preto/15 relative flex items-center justify-center group overflow-hidden w-full max-w-[280px] mx-auto md:mx-0 shadow-sm">
                     <span className="font-mono text-[10px] text-preto/40 uppercase tracking-widest text-center px-4">
                         [ seu retrato<br />principal ]
                     </span>
@@ -32,7 +32,7 @@ export default function Sobre() {
                 </div>
             </section>
 
-            {/* 2. BIO & TRAJETÓRIA + FOTO EM AÇÃO (Agora na Esquerda) */}
+            {/* 2. BIO & TRAJETÓRIA + FOTO EM AÇÃO */}
             <section className="mt-16 pt-11 border-t border-preto/15">
                 <div className="grid grid-cols-1 md:grid-cols-[280px_100px_1fr] gap-10 items-start">
 
@@ -134,15 +134,106 @@ export default function Sobre() {
             <section className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-preto/15 border border-preto/15 mt-[60px]">
                 <div className="bg-osso p-[30px] hover:bg-osso2 transition-colors">
                     <div className="font-mono text-[11px] text-vinho mb-2 uppercase tracking-widest">UFPE · 2018–2025</div>
-                    <div className="font-serif text-[22px] font-normal">Cinema e <i className="italic text-ambar">Audiovisual</i></div>
+                    <div className="font-serif text-[22px] font-normal">Cinema e <i className="italic text-[#C99A3E]">Audiovisual</i></div>
                 </div>
                 <div className="bg-osso p-[30px] hover:bg-osso2 transition-colors">
                     <div className="font-mono text-[11px] text-vinho mb-2 uppercase tracking-widest">UNINTER · 2023–2026</div>
-                    <div className="font-serif text-[22px] font-normal">Análise e <i className="italic text-ambar">Desenv. de Sistemas</i></div>
+                    <div className="font-serif text-[22px] font-normal">Análise e <i className="italic text-[#C99A3E]">Desenv. de Sistemas</i></div>
                 </div>
             </section>
 
-            {/* 6. CALL TO ACTION LIMPO */}
+            {/* 6. LADO B / CANTINHO DE PERSONALIDADE */}
+            <section className="mt-[80px] pt-12 border-t border-preto/15">
+                <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-vinho block mb-6">Cantinho de personalidade</span>
+
+                <div className="mb-10">
+                    <h2 className="font-serif font-normal text-[clamp(28px,4vw,40px)] text-preto">
+                        Cinéfila, <i className="font-light italic text-[#C84A31]">rock clássico</i>, anos 70.
+                    </h2>
+                    <p className="font-mono text-[11px] text-preto/50 max-w-md mt-4 leading-relaxed uppercase tracking-wider">
+                        Quatro elementos pra deixar a personalidade aparecer sem competir com o lado profissional.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-preto/15 border border-preto/15">
+
+                    {/* Lado Esquerdo: Vinil Ilustrado */}
+                    <div className="bg-[#241D18] p-12 min-h-[300px] flex items-center justify-center relative overflow-hidden">
+
+                        {/* O Disco de Vinil feito em CSS puro */}
+                        <div className="w-52 h-52 sm:w-64 sm:h-64 rounded-full bg-[#16120F] border border-[#3A332E] shadow-2xl flex items-center justify-center relative">
+
+                            {/* Sulcos do Vinil */}
+                            <div className="absolute inset-[10px] rounded-full border border-[#2A231E]/40"></div>
+                            <div className="absolute inset-[20px] rounded-full border border-[#2A231E]/50"></div>
+                            <div className="absolute inset-[30px] rounded-full border border-[#2A231E]/40"></div>
+                            <div className="absolute inset-[40px] rounded-full border border-[#2A231E]/60"></div>
+                            <div className="absolute inset-[50px] rounded-full border border-[#2A231E]/40"></div>
+
+                            {/* Selo Central */}
+                            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-[#C84A31] rounded-full z-10 flex flex-col items-center justify-center relative shadow-inner">
+                                <span className="font-mono text-[7.5px] font-bold tracking-widest text-[#FAF4E6] leading-[1.2] text-center mt-1">
+                                    GEOVANNA<br />MELO
+                                </span>
+                                {/* Furo do Disco */}
+                                <div className="w-2 h-2 bg-[#241D18] rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-sm"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Lado Direito: Referências */}
+                    <div className="bg-osso2 p-8 sm:p-12 flex flex-col justify-center">
+
+                        <h3 className="font-serif font-black text-3xl sm:text-4xl text-[#C84A31] lowercase tracking-tighter mb-1">
+                            referências
+                        </h3>
+                        <p className="font-mono text-[9px] text-preto/50 uppercase tracking-widest mb-10">
+                            o que me formou, lado B
+                        </p>
+
+                        <ul className="flex flex-col gap-5">
+                            {/* Ref 1: Cinema (Preenchido) */}
+                            <li className="flex justify-between items-baseline border-b border-preto/10 pb-2 border-dashed group">
+                                <div className="flex gap-4 items-baseline">
+                                    <span className="font-mono text-[10px] text-[#C99A3E] font-bold">01</span>
+                                    <span className="font-serif italic text-[19px] text-preto group-hover:text-[#C84A31] transition-colors">Nova Hollywood</span>
+                                </div>
+                                <span className="font-mono text-[9px] text-preto/40 uppercase tracking-wider text-right ml-4">70s</span>
+                            </li>
+
+                            {/* Ref 2: Música (Placeholder) */}
+                            <li className="flex justify-between items-baseline border-b border-preto/10 pb-2 border-dashed group">
+                                <div className="flex gap-4 items-baseline">
+                                    <span className="font-mono text-[10px] text-[#C99A3E] font-bold">02</span>
+                                    <span className="font-serif italic text-[19px] text-preto group-hover:text-[#C84A31] transition-colors">[ banda / disco ]</span>
+                                </div>
+                                <span className="font-mono text-[9px] text-preto/40 uppercase tracking-wider text-right ml-4">rock clássico</span>
+                            </li>
+
+                            {/* Ref 3: Cinema (Preenchido) */}
+                            <li className="flex justify-between items-baseline border-b border-preto/10 pb-2 border-dashed group">
+                                <div className="flex gap-4 items-baseline">
+                                    <span className="font-mono text-[10px] text-[#C99A3E] font-bold">03</span>
+                                    <span className="font-serif italic text-[19px] text-preto group-hover:text-[#C84A31] transition-colors">Era Código Hays</span>
+                                </div>
+                                <span className="font-mono text-[9px] text-preto/40 uppercase tracking-wider text-right ml-4">cinema antigo</span>
+                            </li>
+
+                            {/* Ref 4: Música (Placeholder) */}
+                            <li className="flex justify-between items-baseline border-b border-transparent pb-2 group">
+                                <div className="flex gap-4 items-baseline">
+                                    <span className="font-mono text-[10px] text-[#C99A3E] font-bold">04</span>
+                                    <span className="font-serif italic text-[19px] text-preto group-hover:text-[#C84A31] transition-colors">[ banda / disco ]</span>
+                                </div>
+                                <span className="font-mono text-[9px] text-preto/40 uppercase tracking-wider text-right ml-4">60s</span>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+
+            {/* 7. CALL TO ACTION LIMPO */}
             <section className="mt-24 mb-8 flex justify-center">
                 <Link href="/projetos" className="group flex items-center gap-4 hover:opacity-75 transition-opacity">
                     <span className="font-serif italic text-2xl md:text-3xl text-vinho">
