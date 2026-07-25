@@ -13,35 +13,35 @@ export default function RootLayout({ children }) {
     <html lang="pt-BR">
       <body className="antialiased flex flex-col min-h-screen relative">
 
-        {/* MENU SUPERIOR (NAV) */}
-        <nav className="flex justify-between items-center py-6 px-[8vw] relative z-50 bg-osso">
+        {/* MENU SUPERIOR (NAV) - Textos aumentados para legibilidade perfeita */}
+        <nav className="flex justify-between items-center py-6 px-[6vw] md:px-[8vw] relative z-50 bg-osso">
 
           {/* LOGO CLICÁVEL */}
           <Link
             href="/"
             onClick={() => setIsOpen(false)}
-            className="font-serif italic text-xl hover:opacity-75 transition-opacity"
+            className="font-serif italic text-2xl hover:opacity-75 transition-opacity"
           >
             geovanna <span className="text-vinho">melo</span>
           </Link>
 
-          {/* SELO DE STATUS NO DESKTOP (Aparece em telas médias e grandes) */}
+          {/* SELO DE STATUS NO DESKTOP */}
           <div className="hidden md:block">
             <StatusBadge />
           </div>
 
-          {/* Links Desktop */}
-          <div className="hidden md:flex gap-7 font-mono text-[11px] tracking-[0.05em] uppercase">
-            <a href="/" className="text-preto/55 hover:text-vinho transition-colors">home</a>
-            <a href="/projetos" className="text-preto/55 hover:text-vinho transition-colors">projetos</a>
-            <a href="/sobre" className="text-preto/55 hover:text-vinho transition-colors">sobre</a>
-            <a href="/contato" className="text-preto/55 hover:text-vinho transition-colors">contato</a>
+          {/* Links Desktop (Aumentados de 11px para 13px) */}
+          <div className="hidden md:flex gap-8 font-mono text-[13px] tracking-[0.05em] uppercase font-medium">
+            <a href="/" className="text-preto/70 hover:text-vinho transition-colors">home</a>
+            <a href="/projetos" className="text-preto/70 hover:text-vinho transition-colors">projetos</a>
+            <a href="/sobre" className="text-preto/70 hover:text-vinho transition-colors">sobre</a>
+            <a href="/contato" className="text-preto/70 hover:text-vinho transition-colors">contato</a>
           </div>
 
-          {/* Botão do Menu Mobile */}
+          {/* Botão do Menu Mobile (Maior e mais fácil de tocar) */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden font-mono text-[11px] tracking-widest uppercase text-preto z-50 p-2 focus:outline-none"
+            className="md:hidden font-mono text-[12px] tracking-widest uppercase text-preto z-50 p-3 focus:outline-none bg-osso2 border border-preto/15"
             aria-label="Menu"
           >
             {isOpen ? '[ fechar ]' : '[ menu ]'}
@@ -50,25 +50,24 @@ export default function RootLayout({ children }) {
 
         {/* OVERLAY DO MENU MOBILE */}
         {isOpen && (
-          <div className="fixed inset-0 bg-osso z-40 flex flex-col justify-center px-[10vw] md:hidden animate-fadeIn">
+          <div className="fixed inset-0 bg-osso z-40 flex flex-col justify-center px-[8vw] md:hidden animate-fadeIn">
 
-            {/* Selo de Status visível no menu mobile */}
-            <div className="mb-8">
+            <div className="mb-10">
               <StatusBadge />
             </div>
 
-            <div className="flex flex-col gap-8 font-serif text-3xl">
+            <div className="flex flex-col gap-8 font-serif text-3xl sm:text-4xl">
               <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-vinho transition-colors">
-                home <span className="font-mono text-xs text-vinho tracking-widest block mt-1">/ início</span>
+                home <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/ início</span>
               </Link>
               <Link href="/projetos" onClick={() => setIsOpen(false)} className="hover:text-vinho transition-colors">
-                projetos <span className="font-mono text-xs text-vinho tracking-widest block mt-1">/ portfólio e curtas</span>
+                projetos <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/ portfólio e curtas</span>
               </Link>
               <Link href="/sobre" onClick={() => setIsOpen(false)} className="hover:text-vinho transition-colors">
-                sobre <span className="font-mono text-xs text-vinho tracking-widest block mt-1">/ bio e tech</span>
+                sobre <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/ posicionamento e bio</span>
               </Link>
               <Link href="/contato" onClick={() => setIsOpen(false)} className="hover:text-vinho transition-colors">
-                contato <span className="font-mono text-xs text-vinho tracking-widest block mt-1">/ e-mail e whatsapp</span>
+                contato <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/ e-mail e whatsapp</span>
               </Link>
             </div>
           </div>
@@ -99,8 +98,8 @@ export default function RootLayout({ children }) {
           }}
         ></div>
 
-        {/* RODAPÉ (FOOTER) */}
-        <footer className="py-8 px-[8vw] flex flex-col sm:flex-row justify-between items-center gap-4 font-mono text-[11px] text-preto/50 tracking-widest uppercase mt-auto">
+        {/* RODAPÉ (FOOTER) - Textos legíveis */}
+        <footer className="py-8 px-[6vw] md:px-[8vw] flex flex-col sm:flex-row justify-between items-center gap-4 font-mono text-[12px] text-preto/70 tracking-widest uppercase mt-auto">
           <span>© 2026 Geovanna Melo</span>
           <span>Editora de Vídeo & Realizadora</span>
         </footer>
