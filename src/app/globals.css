@@ -20,3 +20,24 @@ body {
   color: var(--color-preto);
 }
 
+@layer base {
+
+  /* 1. Rolagem Suave (Smooth Scrolling) */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* 2. Destaque de Texto Personalizado (Selection Color) */
+  ::selection {
+    background-color: #C84A31;
+    /* Fundo Terracota */
+    color: #FAF4E6;
+    /* Texto Marfim */
+  }
+
+  /* Suporte extra para navegadores Firefox */
+  ::-moz-selection {
+    background-color: #C84A31;
+    color: #FAF4E6;
+  }
+}
