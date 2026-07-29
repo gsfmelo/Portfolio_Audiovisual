@@ -1,15 +1,21 @@
 export default function Trajetoria() {
     return (
-        <section className="mt-20 md:mt-28 pt-16 border-t border-preto/15">
-            <div className="grid grid-cols-1 lg:grid-cols-[280px_80px_1fr] gap-8 lg:gap-10 items-start">
-                <div>
-                    <span className="font-mono text-xs md:text-sm tracking-[0.15em] uppercase text-vinho block mb-2 font-medium">Trajetória</span>
-                    <h3 className="font-serif text-2xl md:text-3xl font-normal text-preto">Cinema & Mercado</h3>
-                </div>
-                <div></div>
-                <div className="font-sans text-base md:text-lg leading-[1.8] text-preto/85 space-y-6">
-                    <p>Minha relação com o audiovisual começou no cinema. Durante a graduação em Cinema e Audiovisual pela UFPE, passei por diferentes funções em produções universitárias até encontrar na montagem um espaço onde narrativa e técnica se encontram.</p>
-                    <p>Ao longo dos últimos anos também atuei em marketing digital, produzindo conteúdos para empresas e instituições. Hoje essas duas experiências caminham juntas: levo o olhar cinematográfico para projetos de comunicação e aplico a objetividade do marketing em produções autorais.</p>
+        <section className="px-[6vw] md:px-[8vw] pb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-8 lg:gap-12 border-t border-preto/15 pt-12">
+                <span className="font-mono text-sm tracking-[0.15em] uppercase text-vinho font-medium">
+                    Trajetória
+                </span>
+                <div className="space-y-6 max-w-[720px]">
+                    <p className="font-sans text-lg md:text-xl leading-[1.8] text-preto/85">
+                        <b className="text-vinho font-serif italic font-normal text-2xl md:text-3xl block mb-2">Eu edito pra gerar resultado.</b>
+                        Ritmo, corte certeiro e uma linha editorial pensada pra fazer conteúdo de redes sociais parar o scroll — isso é o que eu entrego todo dia pra marcas e instituições.
+                    </p>
+                    <p className="font-sans text-lg md:text-xl leading-[1.8] text-preto/85">
+                        Essa sensibilidade vem de uma formação sólida: Cinema e Audiovisual pela Universidade Federal de Pernambuco, com passagem por diferentes funções em produções universitárias até construir domínio real de linguagem cinematográfica e construção narrativa. Hoje assino também direção e roteiro em curtas-metragens autorais — um lado que sustenta o outro.
+                    </p>
+                    <p className="font-sans text-lg md:text-xl leading-[1.8] text-preto/85">
+                        Estou cursando Análise e Desenvolvimento de Sistemas, unindo a lógica de quem constrói pra tela com a lógica de quem constrói por trás dela.
+                    </p>
                 </div>
             </div>
         </section>

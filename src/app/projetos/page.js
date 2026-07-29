@@ -1,270 +1,252 @@
 "use client";
 
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
 import FadeIn from '../components/FadeIn';
 
-// Componente limpo de rolagem horizontal com setas
-function SecaoProjetos({ titulo, descricao, projetos }) {
+// IMPORTAÇÃO DOS SEUS DADOS
+import {
+    projetosDestaque,
+    projetosAplicado,
+    projetosAutoral,
+    projetosColaboracoes
+} from '../data/projetos';
+
+// Subcomponente do Divisor de Categoria
+function DivisorCategoria({ idx, texto, contagem }) {
+    return (
+        <div className="flex items-baseline gap-4 px-[6vw] md:px-[8vw]">
+            <span className="font-mono text-sm md:text-base text-[#C99A3E]">{idx}</span>
+            <span className="font-serif italic font-normal text-xl md:text-2xl text-preto/60 whitespace-nowrap">{texto}</span>
+            <div className="flex-1 h-px bg-preto/15"></div>
+            <span className="font-mono text-xs md:text-sm text-preto/40">{contagem}</span>
+        </div>
+    );
+}
+
+// Subcomponente do Carrossel de Projetos (Com Autoplay)
+function Carrossel({ projetos }) {
     const scrollRef = useRef(null);
+    const [isHovered, setIsHovered] = useState(false); // Estado para pausar o autoplay
 
     const rolar = (direcao) => {
         if (scrollRef.current) {
-            const distancia = scrollRef.current.clientWidth * 0.8;
-            scrollRef.current.scrollBy({
-                left: direcao === 'esq' ? -distancia : distancia,
-                behavior: 'smooth'
-            });
+            const track = scrollRef.current;
+            const card = track.querySelector('.car-card');
+            const step = card ? card.offsetWidth + 1 : 400;
+
+            if (direcao === 'dir') {
+                // Verifica se chegou no final. Se sim, volta pro começo (loop).
+                const isAtEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 10;
+                if (isAtEnd) {
+                    track.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    track.scrollBy({ left: step, behavior: 'smooth' });
+                }
+            } else {
+                track.scrollBy({ left: -step, behavior: 'smooth' });
+            }
         }
     };
+
+    // Efeito de Autoplay: Rola para a direita a cada 4 segundos
+    useEffect(() => {
+        let intervalo;
+        if (!isHovered) {
+            intervalo = setInterval(() => {
+                rolar('dir');
+            }, 4000); // 4000ms = 4 segundos
+        }
+
+        // Limpa o intervalo quando o componente desmonta ou quando o mouse entra
+        return () => clearInterval(intervalo);
+    }, [isHovered]);
 
     if (!projetos || projetos.length === 0) return null;
 
     return (
-        <section className="mt-20 md:mt-24 w-full relative">
-            <div className="px-[6vw] md:px-[8vw] flex flex-col md:flex-row md:items-end justify-between gap-6 mb-6">
-                <div>
-                    <h2 className="font-serif text-3xl md:text-4xl text-preto mb-2">{titulo}</h2>
-                    {descricao && <p className="font-mono text-xs text-preto/60 uppercase tracking-widest">{descricao}</p>}
-                </div>
+        <div
+            className="relative group/carousel"
+            onMouseEnter={() => setIsHovered(true)} // Pausa o autoplay
+            onMouseLeave={() => setIsHovered(false)} // Retoma o autoplay
+        >
+            {/* Botão Anterior */}
+            <button
+                onClick={() => rolar('esq')}
+                className="absolute top-1/2 -left-4 md:-left-6 -translate-y-1/2 w-14 h-14 rounded-full bg-osso border border-vinho text-vinho hover:bg-vinho hover:text-osso transition-colors flex items-center justify-center font-mono text-2xl z-10 opacity-0 group-hover/carousel:opacity-100 focus:opacity-100 shadow-md"
+            >
+                ‹
+            </button>
 
-                <div className="flex gap-2">
-                    <button
-                        onClick={() => rolar('esq')}
-                        className="w-10 h-10 md:w-12 md:h-12 border border-preto/15 bg-osso2/50 hover:bg-preto hover:text-osso transition-colors flex items-center justify-center font-sans text-xl focus:outline-none"
-                        aria-label="Rolar para a esquerda"
-                    >
-                        ←
-                    </button>
-                    <button
-                        onClick={() => rolar('dir')}
-                        className="w-10 h-10 md:w-12 md:h-12 border border-preto/15 bg-osso2/50 hover:bg-preto hover:text-osso transition-colors flex items-center justify-center font-sans text-xl focus:outline-none"
-                        aria-label="Rolar para a direita"
-                    >
-                        →
-                    </button>
-                </div>
-            </div>
-
-            {/* Linha fina e limpa em vez da película poluída */}
-            <div className="w-full h-px bg-preto/15 mb-8"></div>
-
+            {/* Trilha do Carrossel */}
             <div
                 ref={scrollRef}
-                className="flex overflow-x-auto snap-x snap-mandatory gap-6 md:gap-10 px-[6vw] md:px-[8vw] pb-10 pt-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] items-stretch"
+                className="flex gap-[1px] bg-preto/15 border border-preto/15 overflow-x-auto snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
             >
-                {projetos.map((projeto, idx) => (
+                {projetos.map((proj) => (
                     <div
-                        key={idx}
-                        className="snap-center shrink-0 w-[85vw] md:w-[700px] lg:w-[850px] flex flex-col md:flex-row gap-8 md:gap-12 group border border-preto/15 bg-osso2/40 hover:bg-osso2 p-6 md:p-10 transition-all duration-300 relative"
+                        key={proj.id}
+                        className="car-card bg-osso flex flex-col md:grid md:grid-cols-[180px_1fr] lg:grid-cols-[200px_1fr] gap-6 md:gap-8 p-6 md:p-8 snap-start shrink-0 basis-[85vw] md:basis-[600px] lg:basis-[700px]"
                     >
-
-                        {/* THUMBNAIL / PÔSTER */}
-                        <div className="w-full md:w-[260px] shrink-0 aspect-[2/3] bg-preto/5 border border-preto/15 flex items-center justify-center relative overflow-hidden">
-                            {projeto.imagem ? (
-                                <img
-                                    src={projeto.imagem}
-                                    alt={`Pôster de ${projeto.titulo}`}
-                                    className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
-                                />
+                        {/* Pôster Maior */}
+                        <div className="aspect-[2/3] border border-dashed border-preto/30 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-osso2 to-osso relative overflow-hidden group">
+                            {proj.imagem ? (
+                                <img src={proj.imagem} alt={proj.tituloNormal} className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" />
                             ) : (
-                                <span className="font-mono text-[10px] md:text-xs uppercase text-preto/40 tracking-widest text-center px-4 border border-dashed border-preto/15 w-full h-full flex items-center justify-center">
-                                    [ Pôster / Capa ]
-                                </span>
+                                <>
+                                    <span className="font-mono text-3xl text-preto/25">+</span>
+                                    <span className="font-mono text-xs text-preto/30 tracking-widest uppercase">pôster</span>
+                                </>
                             )}
                         </div>
 
-                        <div className="flex flex-col flex-grow justify-between py-2">
+                        {/* Informações Maiores */}
+                        <div className="flex flex-col justify-between h-full">
                             <div>
-                                <div className="flex justify-between items-center mb-6 font-mono text-xs text-preto/50 uppercase tracking-widest">
-                                    <span>{projeto.ano}</span>
-                                    <span>{projeto.tag}</span>
+                                <div className="flex justify-between font-mono text-xs md:text-sm text-vinho mb-3 uppercase tracking-wider font-medium">
+                                    <span>{proj.meta1}</span>
+                                    <span>{proj.meta2}</span>
                                 </div>
-
-                                <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-normal text-preto group-hover:text-vinho transition-colors mb-6 leading-tight">
-                                    {projeto.titulo}
+                                <h3 className="font-serif font-medium text-2xl md:text-3xl leading-[1.15] text-preto">
+                                    {proj.tituloNormal} <i className="italic font-light text-vinho">{proj.tituloItalico}</i>
                                 </h3>
-
-                                <div className="flex flex-wrap gap-2 mb-6">
-                                    {projeto.funcoes.map((funcao, i) => (
-                                        <span key={i} className="border border-preto/15 bg-osso px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider text-vinho">
-                                            {funcao}
-                                        </span>
-                                    ))}
-                                </div>
-
-                                <p className="font-sans text-base md:text-lg text-preto/75 leading-relaxed mb-8">
-                                    {projeto.sinopse}
+                                <p className="font-sans text-sm md:text-base text-preto/75 mt-3 leading-[1.65] italic">
+                                    {proj.sinopse}
                                 </p>
                             </div>
-
-                            <div className="pt-6 border-t border-preto/10 mt-auto flex justify-end">
-                                <a
-                                    href={projeto.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="font-mono text-xs uppercase tracking-widest text-preto group-hover:text-vinho font-medium inline-flex items-center gap-2 transition-colors"
-                                >
-                                    <span>Ver detalhes</span>
-                                    <span className="group-hover:translate-x-1 transition-transform">→</span>
-                                </a>
+                            <div className="mt-6 pt-4 border-t border-preto/10">
+                                <div className="font-mono text-xs md:text-sm text-preto/60 uppercase tracking-widest">{proj.funcoes}</div>
+                                <div className="font-mono text-xs md:text-sm text-[#C99A3E] mt-2 font-medium hover:underline cursor-pointer tracking-widest">
+                                    <a href={proj.link} target="_blank" rel="noopener noreferrer">[ ver projeto ]</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 ))}
-
-                <div className="shrink-0 w-[2vw] md:w-[4vw]"></div>
             </div>
-        </section>
+
+            {/* Botão Próximo */}
+            <button
+                onClick={() => rolar('dir')}
+                className="absolute top-1/2 -right-4 md:-right-6 -translate-y-1/2 w-14 h-14 rounded-full bg-osso border border-vinho text-vinho hover:bg-vinho hover:text-osso transition-colors flex items-center justify-center font-mono text-2xl z-10 opacity-0 group-hover/carousel:opacity-100 focus:opacity-100 shadow-md"
+            >
+                ›
+            </button>
+        </div>
     );
 }
 
 export default function Projetos() {
-
-    // 1. PROJETOS EM DESTAQUE
-    const projetosDestaque = [
-        {
-            titulo: 'Quando o Telefone Tocar',
-            imagem: '/images/telefone1.png',
-            ano: '2024 / 2025',
-            tag: 'Curta-Metragem de Ficção (14\')',
-            funcoes: ['Direção', 'Roteiro', 'Produção'],
-            sinopse: 'Projeto aprovado pela Lei Paulo Gustavo Olinda. Um curta-metragem autoral onde assino direção, roteiro e produção.',
-            link: '#'
-        }
-    ];
-
-    // 2. TRABALHO AUTORAL
-    const projetosAutoral = [
-        {
-            titulo: 'Minidoc LGBTQIAPN+ no Audiovisual',
-            ano: '2023 / 2024',
-            tag: 'Pesquisa / Documentário',
-            funcoes: ['Realização', 'Pesquisa'],
-            sinopse: 'Desenvolvido através do Programa de Bolsas de Incentivo de Criação Cultural (BICC) da UFPE. Uma pesquisa autoral voltada para experimentação de linguagem estética e representação.',
-            link: '#'
-        },
-        {
-            titulo: 'Projeto ProntoPlay (Tech/ADS)',
-            ano: '2025',
-            tag: 'Automação & Processamento',
-            funcoes: ['Desenvolvimento Python', 'Edição Automatizada'],
-            sinopse: 'Criado para otimizar fluxos criativos. Utilizando Python, MoviePy e OpenCV, construí uma automação de cortes que une minha lógica de edição de vídeo à engenharia de dados.',
-            link: '#'
-        }
-    ];
-
-    // 3. MARKETING & REDES
-    const projetosMarketing = [
-        {
-            titulo: 'Conheça Malta & Itália',
-            ano: '2022 / 2025',
-            tag: 'Série YouTube / Redes Sociais',
-            funcoes: ['Edição de Vídeo', 'Montagem'],
-            sinopse: 'Série de vídeos e edições dinâmicas para o YouTube e Instagram do Secretariado do Brasil e Falcor Travels. Foco em retenção, criação de peças digitais e adaptação de linguagem.',
-            link: '#'
-        },
-        {
-            titulo: 'Conteúdo Viajante 50+',
-            ano: '2025',
-            tag: 'Storytelling Digital',
-            funcoes: ['Roteiro', 'Planejamento de Conteúdo', 'Edição'],
-            sinopse: 'Elaboração de roteiros, planejamento de linha editorial e edição de vídeos de viagens. Trabalho focado em engajamento real e construção de comunidade digital.',
-            link: '#'
-        },
-        {
-            titulo: 'Propagandas Institucionais de Intercâmbio',
-            ano: '2022 / 2023',
-            tag: 'Vídeo Institucional',
-            funcoes: ['Edição de Vídeo'],
-            sinopse: 'Montagem de propagandas e campanhas de cursos de intercâmbio para rodar em sites institucionais e redes sociais.',
-            link: '#'
-        }
-    ];
-
-    // 4. COLABORAÇÕES (SET)
-    const projetosColaboracoes = [
-        {
-            titulo: 'Casa de Vó',
-            ano: '2025',
-            tag: 'Curta-Metragem',
-            funcoes: ['Assistência de Direção'],
-            sinopse: 'Participação no set de filmagem do curta-metragem "Casa de Vó". Organização do set e assistência direta à visão da direção principal.',
-            link: '#'
-        }
-    ];
-
     return (
-        <main className="min-h-screen py-16 md:py-24 relative z-10 flex flex-col overflow-hidden">
+        <main className="min-h-screen relative z-10 flex flex-col bg-osso">
+            {/* Efeito de ruído global opcional */}
+            <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.04] mix-blend-multiply bg-[url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%22120%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')]"></div>
 
-            <section className="px-[6vw] md:px-[8vw] mb-4">
-                <span className="font-mono text-xs md:text-sm tracking-[0.15em] uppercase text-vinho mb-4 block font-medium">Catálogo · Mostra</span>
-                <h1 className="font-serif font-normal text-[clamp(36px,5vw,60px)] leading-[1.1] tracking-tight mb-6">
-                    Histórias contadas em <i className="font-light italic text-vinho">movimento.</i>
-                </h1>
-                <p className="font-sans text-lg md:text-xl text-preto/80 max-w-2xl leading-relaxed">
-                    Navegue pelo catálogo dos meus trabalhos. Use as setas para rolar pelos projetos e ver os detalhes de cada produção.
-                </p>
-            </section>
-
+            {/* CABEÇALHO (Hero Ampliado) */}
             <FadeIn>
-                <SecaoProjetos
-                    titulo="Em Destaque"
-                    descricao="Obras centrais do meu portfólio"
-                    projetos={projetosDestaque}
-                />
+                <section className="pt-20 pb-12 px-[6vw] md:px-[8vw]">
+                    <span className="font-mono text-sm tracking-[0.15em] uppercase text-vinho mb-4 block font-medium">Projetos · 11 trabalhos</span>
+                    <h1 className="font-serif font-normal text-[clamp(40px,5vw,64px)] leading-[1.1] max-w-[900px] text-preto">
+                        Do <i className="italic font-light text-vinho">corte certeiro</i> ao curta autoral — tudo o que já contei em vídeo.
+                    </h1>
+                    <p className="font-mono text-base md:text-lg text-preto/70 max-w-[600px] mt-6 leading-relaxed">
+                        Do trabalho que resolve pra cliente ao que eu carrego comigo há mais tempo.
+                    </p>
+                </section>
             </FadeIn>
 
+            {/* SEÇÃO 01: DESTAQUE (Cards Gigantes estáticos) */}
             <FadeIn>
-                <SecaoProjetos
-                    titulo="Trabalho Autoral & Pesquisa"
-                    descricao="Direção, roteiros e experimentação"
-                    projetos={projetosAutoral}
-                />
+                <DivisorCategoria idx="01" texto="em destaque" contagem="2 trabalhos" />
+                <section className="pt-8 pb-20 px-[6vw] md:px-[8vw]">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-preto/15 border border-preto/15">
+                        {projetosDestaque && projetosDestaque.map((proj) => (
+                            <div key={proj.id} className="bg-osso flex flex-col md:grid md:grid-cols-[220px_1fr] gap-8 p-8 md:p-10">
+
+                                {/* Pôster Destaque */}
+                                <div className="aspect-[2/3] border border-dashed border-preto/30 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-osso2 to-osso relative overflow-hidden group">
+                                    {proj.imagem ? (
+                                        <img src={proj.imagem} alt={proj.tituloNormal} className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" />
+                                    ) : (
+                                        <>
+                                            <span className="font-mono text-3xl text-preto/25">+</span>
+                                            <span className="font-mono text-xs text-preto/30 tracking-widest uppercase">pôster</span>
+                                        </>
+                                    )}
+                                </div>
+
+                                <div className="flex flex-col justify-between h-full">
+                                    <div>
+                                        <div className="flex justify-between font-mono text-xs md:text-sm text-vinho mb-3 uppercase tracking-wider font-medium">
+                                            <span>{proj.meta1}</span>
+                                            <span>{proj.meta2}</span>
+                                        </div>
+                                        <h3 className="font-serif font-medium text-3xl md:text-4xl leading-[1.1] text-preto">
+                                            {proj.tituloNormal} <i className="italic font-light text-vinho">{proj.tituloItalico}</i>
+                                        </h3>
+                                        <p className="font-sans text-base md:text-lg text-preto/75 mt-4 leading-[1.6] italic">
+                                            {proj.sinopse}
+                                        </p>
+                                    </div>
+                                    <div className="mt-8 pt-5 border-t border-preto/10">
+                                        <div className="font-mono text-xs md:text-sm text-preto/60 uppercase tracking-widest">{proj.funcoes}</div>
+                                        <div className="font-mono text-xs md:text-sm text-[#C99A3E] mt-2 font-medium hover:underline cursor-pointer tracking-widest">
+                                            <a href={proj.link} target="_blank" rel="noopener noreferrer">[ ver projeto ]</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
             </FadeIn>
 
+            {/* SEÇÃO 02: MODO APLICADO */}
             <FadeIn>
-                <SecaoProjetos
-                    titulo="Marketing & Redes"
-                    descricao="Edição dinâmica e planejamento de conteúdo"
-                    projetos={projetosMarketing}
-                />
+                <DivisorCategoria idx="02" texto="modo aplicado" contagem="2 trabalhos · arraste ou use as setas" />
+                <section className="pt-8 pb-20 px-[6vw] md:px-[8vw]">
+                    <div className="mb-10">
+                        <h2 className="font-serif font-normal text-4xl text-preto">Marketing &amp; <i className="italic font-light text-vinho">conteúdo</i></h2>
+                        <p className="font-mono text-base text-preto/60 max-w-xl mt-3 leading-relaxed">Edição e estratégia pra marcas e instituições.</p>
+                    </div>
+                    <Carrossel projetos={projetosAplicado} />
+                </section>
             </FadeIn>
 
+            {/* SEÇÃO 03: TRABALHO AUTORAL */}
             <FadeIn>
-                <SecaoProjetos
-                    titulo="Colaborações de Set"
-                    descricao="Produção e assistência técnica em equipe"
-                    projetos={projetosColaboracoes}
-                />
+                <DivisorCategoria idx="03" texto="trabalho autoral" contagem="4 trabalhos · arraste ou use as setas" />
+                <section className="pt-8 pb-20 px-[6vw] md:px-[8vw]">
+                    <div className="mb-10">
+                        <h2 className="font-serif font-normal text-4xl text-preto">Direção, <i className="italic font-light text-vinho">roteiro e montagem</i></h2>
+                        <p className="font-mono text-base text-preto/60 max-w-xl mt-3 leading-relaxed">Onde a visão é integralmente sua.</p>
+                    </div>
+                    <Carrossel projetos={projetosAutoral} />
+                </section>
             </FadeIn>
 
-{/* 5. CALL TO ACTION FINAL - BANNER FULL WIDTH */}
-      <FadeIn>
-        <section className="mt-20 w-full bg-[#C84A31] text-[#FAF4E6] py-28 md:py-36 px-[6vw] md:px-[8vw] flex flex-col items-center justify-center text-center">
-          
-          {/* Badge de Status */}
-          <div className="flex items-center gap-3 font-mono text-[10px] md:text-xs uppercase tracking-[0.2em] mb-8 opacity-90">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#FAF4E6]"></span>
-            <span>Status: Disponível</span>
-          </div>
+            {/* SEÇÃO 04: COLABORAÇÕES */}
+            <FadeIn>
+                <DivisorCategoria idx="04" texto="colaborações" contagem="3 trabalhos · arraste ou use as setas" />
+                <section className="pt-8 pb-20 px-[6vw] md:px-[8vw]">
+                    <div className="mb-10">
+                        <h2 className="font-serif font-normal text-4xl text-preto">Onde atuei <i className="italic font-light text-vinho">em funções-chave de equipe</i></h2>
+                        <p className="font-mono text-base text-preto/60 max-w-xl mt-3 leading-relaxed">Assistência de direção, montagem e fotografia — trabalho de equipe, mesmo peso.</p>
+                    </div>
+                    <Carrossel projetos={projetosColaboracoes} />
+                </section>
+            </FadeIn>
 
-          {/* Título */}
-          <h2 className="font-serif font-normal text-[clamp(32px,4vw,56px)] leading-tight mb-12 max-w-4xl">
-            Vamos conversar sobre o seu <i className="font-light italic">próximo projeto.</i>
-          </h2>
+            {/* CTA FINAL */}
+            <FadeIn>
+                <div className="bg-vinho text-osso text-center py-24 md:py-32 px-[8vw] mt-10">
+                    <h2 className="font-serif italic font-normal text-[clamp(32px,5vw,52px)]">Gostou do que viu?</h2>
+                    <Link href="/contato" className="inline-block mt-8 font-mono text-sm tracking-[0.1em] uppercase border border-osso text-osso py-4 px-10 hover:bg-osso hover:text-vinho transition-colors font-medium">
+                        Vamos conversar →
+                    </Link>
+                </div>
+            </FadeIn>
 
-          {/* Botão Vazado (Outline) */}
-          <Link 
-            href="/contato" 
-            className="inline-block font-mono text-xs tracking-[0.15em] uppercase border border-[#FAF4E6]/40 hover:bg-[#FAF4E6] hover:text-[#C84A31] transition-colors px-10 py-5"
-          >
-            Entrar em Contato
-          </Link>
-
-        </section>
-      </FadeIn>
-      
         </main>
     );
 }

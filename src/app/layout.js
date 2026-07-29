@@ -1,77 +1,46 @@
-"use client";
-
+// src/app/layout.js
 import "./globals.css";
-import Link from 'next/link';
-import { useState } from 'react';
+import Navbar from './components/Navbar';
 import BackToTop from './components/BackToTop';
-import StatusBadge from './components/StatusBadge';
+
+// BLOCO DE METADADOS E SEO (Agora vai funcionar perfeitamente!)
+export const metadata = {
+  title: {
+    template: '%s | Geovanna Melo',
+    default: 'Geovanna Melo — Editora de Vídeo & Realizadora',
+  },
+  description: 'Portfólio de Geovanna Melo. Editora de vídeo e realizadora audiovisual. Organizando narrativas através do corte certeiro.',
+  openGraph: {
+    title: 'Geovanna Melo — Editora de Vídeo & Realizadora',
+    description: 'Do cinema à criação de conteúdo para marcas. Conheça a mostra completa de trabalhos e trajetória.',
+    url: 'https://seusite.com.br', // Substitua pelo seu domínio quando publicar
+    siteName: 'Portfólio Geovanna Melo',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Geovanna Melo Portfólio',
+      },
+    ],
+    locale: 'pt_BR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Geovanna Melo — Audiovisual',
+    description: 'Organizando narrativas através do corte certeiro.',
+    images: ['/og-image.jpg'],
+  },
+};
 
 export default function RootLayout({ children }) {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <html lang="pt-BR">
       <body className="antialiased flex flex-col min-h-screen relative">
 
-        {/* MENU SUPERIOR (NAV) - Textos aumentados para legibilidade perfeita */}
-        <nav className="flex justify-between items-center py-6 px-[6vw] md:px-[8vw] relative z-50 bg-osso">
-
-          {/* LOGO CLICÁVEL */}
-          <Link
-            href="/"
-            onClick={() => setIsOpen(false)}
-            className="font-serif italic text-2xl hover:opacity-75 transition-opacity"
-          >
-            geovanna <span className="text-vinho">melo</span>
-          </Link>
-
-          {/* SELO DE STATUS NO DESKTOP */}
-          <div className="hidden md:block">
-            <StatusBadge />
-          </div>
-
-          {/* Links Desktop (Aumentados de 11px para 13px) */}
-          <div className="hidden md:flex gap-8 font-mono text-[13px] tracking-[0.05em] uppercase font-medium">
-            <a href="/" className="text-preto/70 hover:text-vinho transition-colors">home</a>
-            <a href="/projetos" className="text-preto/70 hover:text-vinho transition-colors">projetos</a>
-            <a href="/sobre" className="text-preto/70 hover:text-vinho transition-colors">sobre</a>
-            <a href="/contato" className="text-preto/70 hover:text-vinho transition-colors">contato</a>
-          </div>
-
-          {/* Botão do Menu Mobile (Maior e mais fácil de tocar) */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden font-mono text-[12px] tracking-widest uppercase text-preto z-50 p-3 focus:outline-none bg-osso2 border border-preto/15"
-            aria-label="Menu"
-          >
-            {isOpen ? '[ fechar ]' : '[ menu ]'}
-          </button>
-        </nav>
-
-        {/* OVERLAY DO MENU MOBILE */}
-        {isOpen && (
-          <div className="fixed inset-0 bg-osso z-40 flex flex-col justify-center px-[8vw] md:hidden animate-fadeIn">
-
-            <div className="mb-10">
-              <StatusBadge />
-            </div>
-
-            <div className="flex flex-col gap-8 font-serif text-3xl sm:text-4xl">
-              <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-vinho transition-colors">
-                home <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/ início</span>
-              </Link>
-              <Link href="/projetos" onClick={() => setIsOpen(false)} className="hover:text-vinho transition-colors">
-                projetos <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/ portfólio e curtas</span>
-              </Link>
-              <Link href="/sobre" onClick={() => setIsOpen(false)} className="hover:text-vinho transition-colors">
-                sobre <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/ posicionamento e bio</span>
-              </Link>
-              <Link href="/contato" onClick={() => setIsOpen(false)} className="hover:text-vinho transition-colors">
-                contato <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/ e-mail e whatsapp</span>
-              </Link>
-            </div>
-          </div>
-        )}
+        {/* MENU IMPORTADO (Client Component) */}
+        <Navbar />
 
         {/* DIVISOR ESTILO PELÍCULA - TOPO */}
         <div
@@ -98,8 +67,8 @@ export default function RootLayout({ children }) {
           }}
         ></div>
 
-        {/* RODAPÉ (FOOTER) - Textos legíveis */}
-        <footer className="py-8 px-[6vw] md:px-[8vw] flex flex-col sm:flex-row justify-between items-center gap-4 font-mono text-[12px] text-preto/70 tracking-widest uppercase mt-auto">
+        {/* RODAPÉ (FOOTER) */}
+        <footer className="py-8 px-[6vw] md:px-[8vw] flex flex-col sm:flex-row justify-between items-center gap-4 font-mono text-[12px] text-preto/70 tracking-widest uppercase mt-auto bg-osso">
           <span>© 2026 Geovanna Melo</span>
           <span>Editora de Vídeo & Realizadora</span>
         </footer>

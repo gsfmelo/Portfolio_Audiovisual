@@ -1,26 +1,44 @@
 export default function DiferencialTech() {
     return (
-        <section className="mt-20 md:mt-28 pt-12 border-t border-preto/15">
-            <div className="bg-preto/5 p-8 md:p-12 border border-preto/15 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-                <div>
-                    <span className="font-mono text-xs tracking-[0.2em] uppercase text-[#C84A31] block mb-3 font-medium">/ O diferencial técnico</span>
-                    <h3 className="font-serif font-normal text-2xl md:text-3xl text-preto leading-tight mb-3">
-                        Também gosto de entender o que acontece <i className="font-light italic text-[#C99A3E]">por trás da tela.</i>
-                    </h3>
-                    <p className="font-sans text-base text-preto/80 max-w-xl leading-relaxed">
-                        Além do audiovisual, estudo Análise e Desenvolvimento de Sistemas. Isso me permite criar automações e scripts em Python (como o projeto ProntoPlay) para otimizar fluxos de trabalho e processamento de vídeo.
+        <section className="px-[6vw] md:px-[8vw] pb-16">
+
+            {/* Educação */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-preto/15 border border-preto/15">
+
+                {/* Bloco Cinema */}
+                <div className="bg-osso p-8 md:p-10 flex flex-col h-full">
+                    <div>
+                        <div className="font-mono text-xs md:text-sm text-vinho mb-3 uppercase tracking-widest">UFPE · 2018–2025</div>
+                        <div className="font-serif font-normal text-3xl md:text-4xl text-preto mb-6">Cinema e <i className="italic text-[#C99A3E]">Audiovisual</i></div>
+                    </div>
+                    <p className="font-sans text-base text-preto/75 leading-relaxed mt-auto pt-4 border-t border-preto/10">
+                        Graduada na Universidade Federal de Pernambuco, encontrei no curso a porta de entrada para um mundo novo[cite: 2]. Além das atividades acadêmicas, participei ativamente na integração e reestruturação do Diretório Acadêmico do curso[cite: 2]. Também integrei o Programa de Bolsas de Incentivo de Criação Cultural (BICC), onde desenvolvi uma pesquisa autoral e um minidoc sobre a representação LGBTQIAPN+ no audiovisual[cite: 2].
                     </p>
                 </div>
 
-                <a
-                    href="https://seu-portfolio-tech-aqui.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-mono text-xs tracking-[0.1em] uppercase border border-preto bg-preto text-osso px-7 py-4 hover:bg-vinho hover:border-vinho transition-colors text-center whitespace-nowrap font-medium"
-                >
-                    Ver Portfólio Tech →
-                </a>
+                {/* Bloco ADS */}
+                <div className="bg-osso p-8 md:p-10 flex flex-col h-full">
+                    <div>
+                        <div className="font-mono text-xs md:text-sm text-vinho mb-3 uppercase tracking-widest">UNINTER · 2023–2026</div>
+                        <div className="font-serif font-normal text-3xl md:text-4xl text-preto mb-6">Análise e <i className="italic text-[#C99A3E]">Desenvolvimento de Sistemas</i></div>
+                    </div>
+                    <p className="font-sans text-base text-preto/75 leading-relaxed mt-auto pt-4 border-t border-preto/10">
+                        Graduação em andamento no Centro Universitário Internacional - UNINTER[cite: 2]. A tecnologia sempre representou um terreno fértil para mim, principalmente após entrar no mercado de trabalho de audiovisual[cite: 2]. Era essencial pra mim unir algo que eu já amava e expandir a forma com que eu trabalhava[cite: 2].
+                    </p>
+                </div>
+
             </div>
+
+            {/* Teaser ADS */}
+            <div className="mt-[1px] border border-dashed border-preto/30 bg-osso2 p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div className="font-sans text-base md:text-lg text-preto/75 max-w-[600px] leading-relaxed">
+                    Enquanto termino <b className="text-vinho font-serif italic font-normal text-xl md:text-2xl">Análise e Desenvolvimento de Sistemas</b>, também estou construindo um portfólio técnico — onde a lógica de quem edita encontra a lógica de quem programa.
+                </div>
+                <div className="font-mono text-xs uppercase tracking-widest text-[#C99A3E] border border-[#C99A3E] px-5 py-2.5 whitespace-nowrap">
+                    em breve →
+                </div>
+            </div>
+
         </section>
     );
 }
