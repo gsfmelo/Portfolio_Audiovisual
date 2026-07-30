@@ -1,9 +1,9 @@
 export default function Personalidade() {
     const referencias = [
-        { num: '01', nome: 'Nova Hollywood', detalhe: '70s' },
-        { num: '02', nome: 'Rock clássico & Disco', detalhe: 'trilha sonora' },
-        { num: '03', nome: 'Era Código Hays', detalhe: 'cinema antigo' },
-        { num: '04', nome: 'Café na exportação', detalhe: 'indispensável' }
+        { num: '01', nome: 'Cinema Italiano & New Hollywood', detalhe: 'minha kryptonita' },
+        { num: '02', nome: 'Rock clássico & 70s', detalhe: 'trilha sonora' },
+        { num: '03', nome: 'Cinemas de rua', detalhe: 'templos' },
+        { num: '04', nome: 'Fun facts', detalhe: 'indispensável' }
     ];
 
     return (
@@ -15,7 +15,7 @@ export default function Personalidade() {
 
                     <div className="bg-[#241D18] p-12 min-h-[350px] flex flex-col items-center justify-center relative overflow-hidden group">
                         <h2 className="font-serif font-normal text-3xl md:text-4xl text-osso mb-10 text-center z-20">
-                            Cinéfila, <i className="font-light italic text-[#C84A31]">rock clássico</i>, anos 70.
+                            Cinefilia, <i className="font-light italic text-[#C84A31]">rock clássico</i>, anos 70.
                         </h2>
                         <div className="w-56 h-56 sm:w-64 sm:h-64 rounded-full bg-[#16120F] border border-[#3A332E] shadow-2xl flex items-center justify-center relative z-20">
                             <div className="absolute inset-[10px] rounded-full border border-[#2A231E]/40"></div>

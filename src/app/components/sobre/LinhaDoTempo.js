@@ -1,10 +1,10 @@
 export default function LinhaDoTempo() {
     const exps = [
-        { period: '2025 —', roleNormal: 'Editora de ', roleItalic: 'Vídeo', org: 'CAP Assessoria' },
-        { period: 'Ago–Nov 2025', roleNormal: 'Assistente de Marketing Digital', roleItalic: '', org: 'Falcor Travels & Secretariado do Brasil' },
-        { period: 'Jul 2022–2023', roleNormal: 'Estágio em Edição de ', roleItalic: 'Vídeo', org: 'Secretariado do Brasil, Falcor & Pleno' },
-        { period: 'Mai–Jun 2022', roleNormal: 'Estágio em Videomaker', roleItalic: '', org: 'Secretaria da Educação — Pref. Recife' },
-        { period: 'Ago–Out 2021', roleNormal: 'Estágio em Produção ', roleItalic: 'Televisiva', org: 'TV Universitária Recife' }
+        { period: '2025 — Atual', roleNormal: 'Freelancer de Edição de ', roleItalic: 'Vídeo', org: 'CAP Assessoria' },
+        { period: '2025', roleNormal: 'Assistente de Marketing Digital', roleItalic: '', org: 'Falcor Travels & Secretariado do Brasil' },
+        { period: '2022–2023', roleNormal: 'Estágio em Edição de ', roleItalic: 'Vídeo', org: 'Secretariado do Brasil, Falcor & Pleno' },
+        { period: '2022', roleNormal: 'Estágio em Videomaker', roleItalic: '', org: 'Secretaria da Educação — Pref. Recife' },
+        { period: '2021', roleNormal: 'Estágio em Produção ', roleItalic: 'Televisiva', org: 'TV Universitária Recife' }
     ];
 
     return (

@@ -86,7 +86,7 @@ function Carrossel({ projetos }) {
                 {projetos.map((proj) => (
                     <div
                         key={proj.id}
-                        className="car-card bg-osso flex flex-col md:grid md:grid-cols-[180px_1fr] lg:grid-cols-[200px_1fr] gap-6 md:gap-8 p-6 md:p-8 snap-start shrink-0 basis-[85vw] md:basis-[600px] lg:basis-[700px]"
+                        className="car-card bg-osso flex flex-col md:grid md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr] gap-6 md:gap-8 p-6 md:p-8 snap-start shrink-0 basis-[85vw] md:basis-[600px] lg:basis-[700px]"
                     >
                         {/* Pôster Maior */}
                         <div className="aspect-[2/3] border border-dashed border-preto/30 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-osso2 to-osso relative overflow-hidden group">
@@ -145,7 +145,7 @@ export default function Projetos() {
             {/* CABEÇALHO (Hero Ampliado) */}
             <FadeIn>
                 <section className="pt-20 pb-12 px-[6vw] md:px-[8vw]">
-                    <span className="font-mono text-sm tracking-[0.15em] uppercase text-vinho mb-4 block font-medium">Projetos · 11 trabalhos</span>
+                    <span className="font-mono text-sm tracking-[0.15em] uppercase text-vinho mb-4 block font-medium">Projetos · 13 trabalhos</span>
                     <h1 className="font-serif font-normal text-[clamp(40px,5vw,64px)] leading-[1.1] max-w-[900px] text-preto">
                         Do <i className="italic font-light text-vinho">corte certeiro</i> ao curta autoral — tudo o que já contei em vídeo.
                     </h1>
@@ -161,7 +161,7 @@ export default function Projetos() {
                 <section className="pt-8 pb-20 px-[6vw] md:px-[8vw]">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-preto/15 border border-preto/15">
                         {projetosDestaque && projetosDestaque.map((proj) => (
-                            <div key={proj.id} className="bg-osso flex flex-col md:grid md:grid-cols-[220px_1fr] gap-8 p-8 md:p-10">
+                            <div key={proj.id} className="bg-osso flex flex-col md:grid md:grid-cols-[320px_1fr] gap-8 p-8 md:p-10">
 
                                 {/* Pôster Destaque */}
                                 <div className="aspect-[2/3] border border-dashed border-preto/30 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-osso2 to-osso relative overflow-hidden group">
