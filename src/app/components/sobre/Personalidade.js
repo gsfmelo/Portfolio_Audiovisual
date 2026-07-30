@@ -3,7 +3,7 @@ export default function Personalidade() {
         { num: '01', nome: 'Cinema Italiano & New Hollywood', detalhe: 'minha kryptonita' },
         { num: '02', nome: 'Rock clássico & 70s', detalhe: 'trilha sonora' },
         { num: '03', nome: 'Cinemas de rua', detalhe: 'templos' },
-        { num: '04', nome: 'Fun facts', detalhe: 'indispensável' }
+        { num: '04', nome: 'Stardew Valley', detalhe: 'indispensável' }
     ];
 
     return (

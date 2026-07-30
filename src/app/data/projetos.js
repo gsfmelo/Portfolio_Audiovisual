@@ -18,7 +18,7 @@ export const projetosDestaque = [
         meta2: "2024–26",
         tituloNormal: "Quando o",
         tituloItalico: "Telefone Tocar",
-        sinopse: <>Sinopse: Cláudia é uma mulher ansiosa e qualquer coisa é capaz de levar aos seus limites. Após receber uma ligação inesperada com um convite para se encontrar com uma amiga próxima, ela teme que, talvez, um segredo seu tenha sido descoberto. A amiga, por outro lado, só precisava de um motivo para tirar Cláudia de casa. <br /><br />Curta-Metragem aprovado pela Lei Paulo Gustavo Olinda 2023.</>,
+        sinopse: <>Sinopse: Cláudia é uma mulher ansiosa e qualquer coisa é capaz de levar aos seus limites. Após receber uma ligação inesperada com um convite para se encontrar com uma amiga próxima, ela teme que, talvez, um segredo seu tenha sido descoberto. A amiga, por outro lado, só precisava de um motivo para tirar Cláudia de casa. <br /><br />Curta-Metragem aprovado pela Lei Paulo Gustavo Olinda 2023 e trabalho de conclusão de curso da diretora Geovanna Melo.</>,
         funcoes: "direção, roteiro e produção",
         link: "https://youtu.be/cHRQXVLH-w8",
         imagem: "/telefone1.png"
@@ -43,7 +43,7 @@ export const projetosAplicado = [
         meta2: "2026",
         tituloNormal: "Ferramentas Google",
         tituloItalico: "na Prática",
-        sinopse: <>O projeto "Inclusão Digital: Ferramentas Google para Aprendizagem na Prática." consiste em uma série de quatro vídeos tutoriais simples, criados para capacitar estudantes no uso de ferramentas Google. <br /><br />Este projeto foi idealizado e desenvolvido como parte das Atividades Extensionistas do curso de Análise e Desenvolvimento de Sistemas da UNINTER.</>,
+        sinopse: <>O projeto "Inclusão Digital: Ferramentas Google para Aprendizagem na Prática." consiste em uma série de quatro vídeos tutoriais simples, criados para capacitar estudantes no uso de ferramentas Google. <br /><br />Projeto idealizado e desenvolvido como parte das Atividades Extensionistas do curso de Análise e Desenvolvimento de Sistemas.</>,
         funcoes: "roteiro, produção, edição e finalização",
         link: "https://www.youtube.com/playlist?list=PLAtXrirtaARc",
         imagem: "/ferramentas1.png"
@@ -68,7 +68,7 @@ export const projetosAutoral = [
         meta2: "2019–21",
         tituloNormal: "Insônia",
         tituloItalico: "",
-        sinopse: <>Sinopse: Márcia passa mais uma noite em claro tentando vencer a insônia. À medida que o cansaço se acumula, sons inexplicáveis, a escuridão da casa e acontecimentos cada vez mais inquietantes fazem a fronteira entre realidade e imaginação se tornar incerta. Enquanto espera o amanhecer, ela precisa enfrentar os próprios medos e as consequências de uma mente à beira do colapso.<br /><br />Curta-Metragem realizado para a disciplina de Direção. </>,
+        sinopse: <>Sinopse: Márcia passa mais uma noite em claro tentando vencer a insônia. À medida que o cansaço se acumula, sons inexplicáveis, a escuridão da casa e acontecimentos cada vez mais inquietantes fazem a fronteira entre realidade e imaginação se tornar incerta. Enquanto espera o amanhecer, ela precisa enfrentar os próprios medos e as consequências de uma mente à beira do colapso.<br /><br />Curta-Metragem universitário realizado para a disciplina de Direção. </>,
         funcoes: "direção, assist. de montagem e finalização",
         link: "https://drive.google.com/file/d/1sACciKtBloNwgcr3t-hCfFly3PED6IE-/view",
         imagem: "/insonia1.jpeg"
@@ -79,7 +79,7 @@ export const projetosAutoral = [
         meta2: "2021",
         tituloNormal: "All About",
         tituloItalico: "Love",
-        sinopse: "Vídeo-ensaio realizado para a disciplina de Cinema Musical no semestre 2021.1. Trabalho que me possibilitou aprender edição/montagem de vídeos.",
+        sinopse: "Vídeo-ensaio realizado para a disciplina de Cinema Musical. Trabalho que me possibilitou aprender edição/montagem de vídeos.",
         funcoes: "montagem",
         link: "https://drive.google.com/file/d/1sACciKtBloNwgcr3t-hCfFly3PED6IE-/view",
         imagem: "/love1.png"
@@ -104,20 +104,20 @@ export const projetosColaboracoes = [
         meta2: "2026",
         tituloNormal: "Casa de ",
         tituloItalico: "Vó",
-        sinopse: <>Sinopse: Após a morte de sua avó, o jovem Gabriel enfrenta um fim de ano melancólico, marcado pela nova e fragmentada dinâmica familiar. O curta mergulha na jornada emocional do neto, que, em meio à dor da perda, revisita as memórias afetivas e as tradições compartilhadas com a avó em sua casa de praia. <br /><br />Curta-Metragem aprovado pela Lei Paulo Gustavo Paulista 2024.</>,
+        sinopse: <>Sinopse: Após a morte de sua avó, o jovem Gabriel enfrenta um fim de ano melancólico, marcado pela nova e fragmentada dinâmica familiar. O curta mergulha na jornada emocional do neto, que, em meio à dor da perda, revisita as memórias afetivas e as tradições compartilhadas com a avó em sua casa de praia. <br /><br />Curta-Metragem aprovado pela Lei Paulo Gustavo Paulista 2024. Atualmente em fase de pós-produção.</>,
         funcoes: "assistência de direção",
         link: "",
-        imagem: ""
+        imagem: "/vo1.png"
     },
         {
         id: 10,
-        meta1: "CURTA · 6'",
+        meta1: "CURTA · 5'",
         meta2: "2025",
         tituloNormal: "Declaração de",
         tituloItalico: "Amor",
-        sinopse: <>Sinopse: “Para me amar, confesso que já tentei de tudo.” O projeto de curta-metragem possui formato de doc-ficção, em uma narrativa sensível sobre crescimento e amor próprio.<br /><br />Curta-Metragem aprovado pela Lei Paulo Gustavo Paulista 2024.</>,
-        funcoes: "assistência de direção e montagem",
-        link: "https://drive.google.com/file/d/1tliO9UMUqJRinbjKLdZsttldngD8EEzv/view",
+        sinopse: <>Sinopse: Em formato de curta-documentário, o projeto navega sob memórias de infância, marcas no corpo e silêncios carregados, tudo sob a ótica de Pietra, que revela suas tentativas de se abraçar, se olhar e se aceitar. Através de gestos simples e confissões profundas, o filme expõe a vulnerabilidade e a força escondidas no ato de existir. <br /><br />Curta-Metragem aprovado pela Lei Paulo Gustavo Paulista 2024 e trabalho de conclusão de curso da diretora Pietra Couto.</>,
+        funcoes: "assistência de direção",
+        link: "https://drive.google.com/file/d/1zBmzQENbLaBjBOJWQWCK0fqNEJEgCuVJ/view?usp=sharing",
         imagem: "/declaracao1.png"
     },
     {
@@ -128,7 +128,7 @@ export const projetosColaboracoes = [
         tituloItalico: "",
         sinopse: <>Sinopse: O que era para ser uma festa se transforma em um pesadelo quando o sumiço de seus amigos revela a Ju e Rafa um grupo de agressores vindos da internet. Enquanto tentam sobreviver ao ataque, uma colega aparece para ajudar, transformando a noite de festa em um banho de sangue.  <br /><br />Curta-Metragem universitário realizado como Trabalho de Conclusão de Curso do diretor Eduardo Gomes.</>,
         funcoes: "assistência de direção e montagem",
-        link: "https://drive.google.com/file/d/1tliO9UMUqJRinbjKLdZsttldngD8EEzv/view",
+        link: "https://drive.google.com/file/d/1tliO9UMUqJRInbjKLdZstt1dngD8EEzv/view?usp=sharing",
         imagem: "/20001.png"
     },
     {
@@ -151,6 +151,6 @@ export const projetosColaboracoes = [
     sinopse: <>Sinopse: Após mais um dia de trabalho no cemitério, Seu Zuza volta para uma casa tomada pelo silêncio. Em meio a memórias que insistem em permanecer, ele enfrenta a solidão e a ausência de quem já não está, revelando um delicado retrato sobre o luto e a passagem do tempo.<br /><br />Curta-Metragem realizado para a disciplina de Produção e primeiro trabalho audiovisual universitário. </>,
     funcoes: "assistência de fotografia",
     link: "https://www.youtube.com/watch?v=NVkbBxgPe9k",
-    imagem: ""
+    imagem: "/reticencia1.png"
     }
 ];
