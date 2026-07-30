@@ -43,10 +43,10 @@ export const projetosAplicado = [
         meta2: "2026",
         tituloNormal: "Ferramentas Google",
         tituloItalico: "na Prática",
-        sinopse: "Inclusão Digital: Ferramentas Google para Ambientes de Aprendizagem na Prática. Atividade extensionista.",
-        funcoes: "roteiro, produção e edição",
-        link: "https://www.youtube.com/playlist?list=PLAtXrirtaARCMB",
-        imagem: ""
+        sinopse: <>O projeto "Inclusão Digital: Ferramentas Google para Aprendizagem na Prática." consiste em uma série de quatro vídeos tutoriais simples, criados para capacitar estudantes no uso de ferramentas Google. <br /><br />Este projeto foi idealizado e desenvolvido como parte das Atividades Extensionistas do curso de Análise e Desenvolvimento de Sistemas da UNINTER.</>,
+        funcoes: "roteiro, produção, edição e finalização",
+        link: "https://www.youtube.com/playlist?list=PLAtXrirtaARc",
+        imagem: "/ferramentas1.png"
     }
 ];
 
@@ -82,7 +82,7 @@ export const projetosAutoral = [
         sinopse: "Vídeo-ensaio realizado para a disciplina de Cinema Musical no semestre 2021.1. Trabalho que me possibilitou aprender edição/montagem de vídeos.",
         funcoes: "montagem",
         link: "https://drive.google.com/file/d/1sACciKtBloNwgcr3t-hCfFly3PED6IE-/view",
-        imagem: ""
+        imagem: "/love1.png"
     },
     {
         id: 8,
@@ -93,7 +93,7 @@ export const projetosAutoral = [
         sinopse: <>Para dar vida a garota dos seus sonhos, Júlia cria um Instagram fictício, chamado Olívia. Um jogo de manipulação começa quando Júlia se sente ameaçada por Letícia, uma caloura que rouba a identidade exposta no perfil. <br /><br />Instasérie desenvolvida para a disciplina de Dispositivos Móveis no Audiovisual.</>,
         funcoes: "direção, roteiro, produção e fotografia",
         link: "https://www.instagram.com/olivia_serie/",
-        imagem: ""
+        imagem: "/olivia1.png"
     }
 ];
 
@@ -129,7 +129,7 @@ export const projetosColaboracoes = [
         sinopse: <>Sinopse: O que era para ser uma festa se transforma em um pesadelo quando o sumiço de seus amigos revela a Ju e Rafa um grupo de agressores vindos da internet. Enquanto tentam sobreviver ao ataque, uma colega aparece para ajudar, transformando a noite de festa em um banho de sangue.  <br /><br />Curta-Metragem universitário realizado como Trabalho de Conclusão de Curso do diretor Eduardo Gomes.</>,
         funcoes: "assistência de direção e montagem",
         link: "https://drive.google.com/file/d/1tliO9UMUqJRinbjKLdZsttldngD8EEzv/view",
-        imagem: ""
+        imagem: "/20001.png"
     },
     {
         id: 12,
