@@ -29,15 +29,44 @@ export default function DiferencialTech() {
 
             </div>
 
-            {/* Teaser ADS */}
-            <div className="mt-[1px] border border-dashed border-preto/30 bg-osso2 p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                <div className="font-sans text-base md:text-lg text-preto/75 max-w-[600px] leading-relaxed">
-                    Este site foi inteiramente desenvolvido por mim, para saber mais sobre minha trajetória em <b className="text-vinho font-serif italic font-normal text-xl md:text-2xl">tecnologia</b>, acesse meu portfólio tech. 
-                </div>
-                <div className="font-mono text-xs uppercase tracking-widest text-[#C99A3E] border border-[#C99A3E] px-5 py-2.5 whitespace-nowrap">
-                    em breve →
-                </div>
+                {/* Teaser ADS - Estilo Editor de Código (Discreto) */}
+      <div className="mt-[1px] border border-preto/15 bg-osso2 p-8 md:p-10 font-mono text-xs md:text-sm flex flex-col md:flex-row items-start md:items-end justify-between gap-8">
+
+        {/* Container do Código (Sem números de linha) */}
+        <div className="overflow-x-auto w-full pb-2 md:pb-0 scrollbar-hide">
+          <div className="flex flex-col min-w-max text-preto/70 leading-[1.8]">
+            <div>
+              <span className="text-preto/50">const</span> <span className="text-preto/80 font-medium">techPortfolio</span> = {'{'}
             </div>
+            <div className="pl-6 md:pl-8">
+              dev: <span className="text-vinho/80">"Geovanna Melo"</span>,
+            </div>
+            <div className="pl-6 md:pl-8">
+              detalhe: <span className="text-vinho/80">"Este site foi inteiramente desenvolvido por mim."</span>,
+            </div>
+            <div className="pl-6 md:pl-8">
+              proximoPasso: <span className="text-vinho/80">"Para conhecer minha trajetória em tecnologia, acesse meu portfólio tech."</span>,
+            </div>
+            <div className="pl-6 md:pl-8">
+              status: <span className="text-[#C99A3E]/90">"Compilando projetos..."</span>
+            </div>
+            <div>{'}'};</div>
+            
+            <div className="mt-3 text-preto/30 italic">
+              // run build
+            </div>
+          </div>
+        </div>
+
+        {/* Botão "Em Breve" mais sutil */}
+        <div className="shrink-0 w-full md:w-auto flex justify-start md:justify-end">
+          <div className="font-mono text-xs uppercase tracking-[0.2em] text-preto/50 border border-preto/15 bg-transparent px-6 py-3 whitespace-nowrap flex items-center gap-2 select-none hover:text-vinho hover:border-vinho/30 transition-colors">
+            <span>em breve</span>
+            <span className="animate-pulse">_</span>
+          </div>
+        </div>
+
+      </div>
 
         </section>
     );

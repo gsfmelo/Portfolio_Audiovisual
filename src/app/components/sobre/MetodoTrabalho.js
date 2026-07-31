@@ -1,12 +1,30 @@
 export default function MetodoTrabalho() {
-    return (
-        <section className="px-[6vw] md:px-[8vw] py-20 text-center relative">
-            <p className="font-serif italic font-normal text-[clamp(28px,4vw,44px)] leading-[1.4] max-w-[800px] mx-auto text-preto">
-                Meu trabalho começa onde a <i className="text-vinho">edição</i> encontra a <i className="text-vinho">escuta</i> — cortar bem é, antes de tudo, saber o que vale a pena guardar.
-            </p>
-            <svg className="block mx-auto mt-8" width="180" height="26" viewBox="0 0 180 26">
-                <path d="M2 6 C 22 -2, 20 20, 40 14 C 56 8, 54 20, 72 16 C 90 10, 88 20, 106 16 C 126 10, 126 20, 148 14 C 160 10, 162 16, 174 12" fill="none" stroke="#C84A31" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-        </section>
-    );
+  return (
+    <section>
+      {/* 2. O NOVO BANNER FOTO COM CITAÇÃO (TRANSITION SCENE) */}
+        <div className="relative w-full h-[40vh] min-h-[300px] flex items-center justify-center mt-8 mb-12 md:mt-12 md:mb-16 overflow-hidden shadow-inner">
+        {/* A Imagem de Fundo */}
+        <img
+          src="/foto-working.jpg"
+          alt="Geovanna Melo no set de gravação e edição"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        
+        {/* Overlay Escuro */}
+        <div className="absolute inset-0 bg-preto/70 mix-blend-multiply"></div>
+
+        {/* O Texto da Citação */}
+        <div className="relative z-10 px-[6vw] md:px-[8vw] text-center max-w-4xl flex flex-col items-center gap-6">
+          <span className="w-12 h-[1px] bg-[#C99A3E]/70 block mb-2"></span>
+          
+          <h2 className="font-serif italic font-light text-[clamp(26px,4vw,44px)] leading-[1.3] text-osso">
+            "Meu trabalho começa onde a edição encontra a escuta — cortar bem é, antes de tudo, saber o que vale a pena guardar."
+          </h2>
+          
+          <span className="w-12 h-[1px] bg-[#C99A3E]/70 block mt-2"></span>
+        </div>
+      </div>
+      
+    </section>
+  );
 }

@@ -3,7 +3,7 @@ export default function Trajetoria() {
         <section className="px-[6vw] md:px-[8vw] pb-16">
             <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-8 lg:gap-12 border-t border-preto/15 pt-12">
                 <span className="font-mono text-sm tracking-[0.15em] uppercase text-vinho font-medium">
-                    Trajetória
+                    como eu penso
                 </span>
                 <div className="space-y-6 max-w-[720px]">
                     <p className="font-sans text-lg md:text-xl leading-[1.8] text-preto/85">

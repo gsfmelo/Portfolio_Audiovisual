@@ -19,9 +19,9 @@ export default function Sobre() {
 
             <FadeIn><Trajetoria /></FadeIn>
 
-            <FadeIn><MetodoTrabalho /></FadeIn>
-
             <FadeIn><LinhaDoTempo /></FadeIn>
+
+            <FadeIn><MetodoTrabalho /></FadeIn>
 
             <FadeIn><ServicosGrid /></FadeIn>
 
@@ -33,7 +33,7 @@ export default function Sobre() {
             <FadeIn>
                 <div className="w-full bg-[#C84A31] text-[#FAF4E6] py-28 md:py-36 px-[6vw] md:px-[8vw] flex flex-col items-center justify-center text-center">
                     <h2 className="font-serif font-normal text-[clamp(36px,5vw,64px)] leading-tight mb-10 max-w-4xl">
-                        Quer ver o trabalho de <i className="font-light italic">verdade?</i>
+                        Já viu os meus <i className="font-light italic">trabalhos?</i>
                     </h2>
                     <Link
                         href="/projetos"

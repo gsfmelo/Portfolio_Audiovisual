@@ -51,12 +51,12 @@ export default function Contato() {
               Sua vez de assumir o <i className="font-light italic text-vinho">roteiro.</i>
             </h1>
             <p className="font-sans text-lg md:text-xl text-preto/80 leading-relaxed mb-10 max-w-md">
-              Preencha os campos ao lado para iniciarmos nosso próximo projeto, ou me chame pelos canais diretos abaixo.
+              Preencha os campos ao lado para iniciarmos nosso próximo projeto ou me chame pelos canais diretos abaixo.
             </p>
 
             <div className="space-y-6 pt-8 border-t border-preto/15">
               <div>
-                <span className="font-mono text-xs uppercase tracking-widest text-preto/50 block mb-2">E-mail direto</span>
+                <span className="font-mono text-xs uppercase tracking-widest text-preto/50 block mb-2">E-mail</span>
                 <a href="mailto:gsfmelo@gmail.com" className="font-serif text-3xl hover:text-vinho transition-colors text-preto">
                   gsfmelo@gmail.com
                 </a>
@@ -66,7 +66,6 @@ export default function Contato() {
                 <div className="flex gap-6 font-mono text-xs md:text-sm uppercase tracking-widest">
                   <a href="#" className="text-preto hover:text-vinho underline decoration-preto/20 underline-offset-4">Instagram</a>
                   <a href="#" className="text-preto hover:text-vinho underline decoration-preto/20 underline-offset-4">LinkedIn</a>
-                  <a href="#" className="text-preto hover:text-vinho underline decoration-preto/20 underline-offset-4">GitHub</a>
                 </div>
               </div>
             </div>

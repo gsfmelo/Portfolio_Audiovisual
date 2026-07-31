@@ -93,7 +93,7 @@ export default function Home() {
           <div className="px-[6vw] md:px-[8vw]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-preto/15 border border-preto/15">
               {projetosDestaque && projetosDestaque.map((proj) => (
-                <div key={proj.id} className="bg-osso flex flex-col md:grid md:grid-cols-[220px_1fr] gap-8 p-8 md:p-10 transition-colors hover:bg-osso/80">
+                <div key={proj.id} className="bg-osso flex flex-col md:grid md:grid-cols-[300px_1fr] gap-8 p-8 md:p-10 transition-colors hover:bg-osso/80">
 
                   {/* Pôster */}
                   <div className="aspect-[2/3] border border-dashed border-preto/30 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-osso2 to-osso relative overflow-hidden group">

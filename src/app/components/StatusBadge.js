@@ -5,7 +5,7 @@ export default function StatusBadge() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C84A31] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#C84A31]"></span>
             </span>
-            <span className="font-mono text-[9px] tracking-[0.15em] uppercase text-preto/70">
+            <span className="font-mono text-[11px] tracking-[0.15em] uppercase text-preto/70">
                 Disponível para freelas & projetos
             </span>
         </div>
