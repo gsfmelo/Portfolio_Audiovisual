@@ -147,10 +147,10 @@ export default function Projetos() {
                 <section className="pt-20 pb-12 px-[6vw] md:px-[8vw]">
                     <span className="font-mono text-sm tracking-[0.15em] uppercase text-vinho mb-4 block font-medium">Projetos · 13 trabalhos</span>
                     <h1 className="font-serif font-normal text-[clamp(40px,5vw,64px)] leading-[1.1] max-w-[900px] text-preto">
-                        Do <i className="italic font-light text-vinho">corte certeiro</i> ao curta autoral — tudo o que já contei em vídeo.
+                        Tudo o que já <i className="italic font-light text-vinho">contei</i> em vídeo
                     </h1>
                     <p className="font-mono text-base md:text-lg text-preto/70 max-w-[600px] mt-6 leading-relaxed">
-                        Do trabalho que resolve pra cliente ao que eu carrego comigo há mais tempo.
+                        Dos projetos institucionais aos autorais. Uma seleção de trabalhos que refletem minha visão e meu estilo.
                     </p>
                 </section>
             </FadeIn>
@@ -203,11 +203,11 @@ export default function Projetos() {
 
             {/* SEÇÃO 02: MODO APLICADO */}
             <FadeIn>
-                <DivisorCategoria idx="02" texto="modo aplicado" contagem="2 trabalhos · arraste ou use as setas" />
+                <DivisorCategoria idx="02" texto="modo conteúdo" contagem="2 trabalhos · arraste ou use as setas" />
                 <section className="pt-8 pb-20 px-[6vw] md:px-[8vw]">
                     <div className="mb-10">
                         <h2 className="font-serif font-normal text-4xl text-preto">Marketing &amp; <i className="italic font-light text-vinho">conteúdo</i></h2>
-                        <p className="font-mono text-base text-preto/60 max-w-xl mt-3 leading-relaxed">Edição e estratégia pra marcas e instituições.</p>
+                        <p className="font-mono text-base text-preto/60 max-w-xl mt-3 leading-relaxed">Edição, campanha e estratégia pra marcas e instituições.</p>
                     </div>
                     <Carrossel projetos={projetosAplicado} />
                 </section>
@@ -215,11 +215,11 @@ export default function Projetos() {
 
             {/* SEÇÃO 03: TRABALHO AUTORAL */}
             <FadeIn>
-                <DivisorCategoria idx="03" texto="trabalho autoral" contagem="4 trabalhos · arraste ou use as setas" />
+                <DivisorCategoria idx="03" texto="modo autoral" contagem="5 trabalhos · arraste ou use as setas" />
                 <section className="pt-8 pb-20 px-[6vw] md:px-[8vw]">
                     <div className="mb-10">
-                        <h2 className="font-serif font-normal text-4xl text-preto">Direção, <i className="italic font-light text-vinho">roteiro e montagem</i></h2>
-                        <p className="font-mono text-base text-preto/60 max-w-xl mt-3 leading-relaxed">Onde a visão é integralmente sua.</p>
+                        <h2 className="font-serif font-normal text-4xl text-preto">Direção, <i className="italic font-light text-vinho">produção e montagem</i></h2>
+                        <p className="font-mono text-base text-preto/60 max-w-xl mt-3 leading-relaxed">Onde compartilho minha visão.</p>
                     </div>
                     <Carrossel projetos={projetosAutoral} />
                 </section>
@@ -230,8 +230,8 @@ export default function Projetos() {
                 <DivisorCategoria idx="04" texto="colaborações" contagem="3 trabalhos · arraste ou use as setas" />
                 <section className="pt-8 pb-20 px-[6vw] md:px-[8vw]">
                     <div className="mb-10">
-                        <h2 className="font-serif font-normal text-4xl text-preto">Onde atuei <i className="italic font-light text-vinho">em funções-chave de equipe</i></h2>
-                        <p className="font-mono text-base text-preto/60 max-w-xl mt-3 leading-relaxed">Assistência de direção, montagem e fotografia — trabalho de equipe, mesmo peso.</p>
+                        <h2 className="font-serif font-normal text-4xl text-preto">Onde atuei <i className="italic font-light text-vinho">em funções-chave</i></h2>
+                        <p className="font-mono text-base text-preto/60 max-w-xl mt-3 leading-relaxed">Assistência de direção, produção, montagem e fotografia — trabalho de equipe, mesmo peso.</p>
                     </div>
                     <Carrossel projetos={projetosColaboracoes} />
                 </section>

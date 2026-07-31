@@ -3,7 +3,7 @@ export default function Personalidade() {
         { num: '01', nome: 'Cinema Italiano & New Hollywood', detalhe: 'minha kryptonita' },
         { num: '02', nome: 'Rock clássico & 70s', detalhe: 'trilha sonora' },
         { num: '03', nome: 'Cinemas de rua', detalhe: 'templos' },
-        { num: '04', nome: 'Stardew Valley', detalhe: 'indispensável' }
+        { num: '04', nome: 'Fun facts', detalhe: 'indispensável' }
     ];
 
     return (
@@ -30,7 +30,7 @@ export default function Personalidade() {
 
                     <div className="bg-osso p-8 md:p-12 flex flex-col justify-center">
                         <h3 className="font-serif font-normal text-3xl md:text-4xl text-[#C84A31] lowercase mb-2">referências</h3>
-                        <p className="font-mono text-xs md:text-sm text-preto/60 uppercase tracking-widest mb-10">o que me formou</p>
+                        <p className="font-mono text-xs md:text-sm text-preto/60 uppercase tracking-widest mb-10">o que eu amo</p>
                         <ul className="flex flex-col gap-6">
                             {referencias.map((ref, idx) => (
                                 <li key={idx} className="flex justify-between items-baseline border-b border-preto/10 pb-3 border-dashed group/item">

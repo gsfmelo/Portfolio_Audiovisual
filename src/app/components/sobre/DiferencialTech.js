@@ -12,7 +12,7 @@ export default function DiferencialTech() {
                         <div className="font-serif font-normal text-3xl md:text-4xl text-preto mb-6">Cinema e <i className="italic text-[#C99A3E]">Audiovisual</i></div>
                     </div>
                     <p className="font-sans text-base text-preto/75 leading-relaxed mt-auto pt-4 border-t border-preto/10">
-                        Bacharel em Cinema e Audiovisual pela Universidade Federal do Pernambuco, encontrei no curso a porta de entrada para um mundo novo. Além das atividades acadêmicas, participei ativamente na integração e reestruturação do Diretório Acadêmico do curso. Também integrei o Programa de Bolsas de Incentivo de Criação Cultural (BICC), onde desenvolvi uma pesquisa autoral e um minidoc sobre a representação LGBTQIAPN+ no audiovisual.
+                        Bacharel em Cinema e Audiovisual pela Universidade Federal do Pernambuco. Participei ativamente na integração e reestruturação do Diretório Acadêmico do curso. Também integrei o Programa de Bolsas de Incentivo de Criação Cultural (BICC), onde desenvolvi uma pesquisa autoral e um minidoc sobre a representação LGBTQIAPN+ no audiovisual.
                     </p>
                 </div>
 
@@ -23,7 +23,7 @@ export default function DiferencialTech() {
                         <div className="font-serif font-normal text-3xl md:text-4xl text-preto mb-6">Análise e <i className="italic text-[#C99A3E]">Desenvolvimento de Sistemas</i></div>
                     </div>
                     <p className="font-sans text-base text-preto/75 leading-relaxed mt-auto pt-4 border-t border-preto/10">
-                        Graduação em andamento no Centro Universitário Internacional - UNINTER. A tecnologia sempre representou um terreno fértil para mim, principalmente após entrar no mercado de trabalho. Quando senti a necessidade de unir algo que eu já amava e melhorar todos os meus processos através das facilidades da tecnologia. Por isso, meu maior objetivo é criar soluções mais eficientes e inovadoras para meu método de trabalho.
+                        Tecnólogo em andamento no Centro Universitário Internacional - UNINTER. A tecnologia sempre representou um terreno fértil para mim, principalmente após entrar no mercado de trabalho. Meu maior objetivo nesse formação é criar soluções mais eficientes e inovadoras para meu método de trabalho.
                     </p>
                 </div>
 

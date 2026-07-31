@@ -9,7 +9,7 @@ export default function HeroSobre() {
                     Edito pra <i className="italic font-light text-vinho">convencer.</i> Dirijo pra <i className="italic font-light text-vinho">ficar.</i>
                 </h1>
                 <div className="font-mono text-xs md:text-sm tracking-[0.1em] uppercase text-preto/60 mt-6 font-medium">
-                    editora de vídeo · realizadora audiovisual · marketing de conteúdo
+                    realizadora audiovisual · editora de vídeo · estrategista de conteúdo
                 </div>
             </div>
 

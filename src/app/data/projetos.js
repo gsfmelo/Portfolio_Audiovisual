@@ -127,7 +127,7 @@ export const projetosColaboracoes = [
         tituloNormal: "2000.com",
         tituloItalico: "",
         sinopse: <>Sinopse: O que era para ser uma festa se transforma em um pesadelo quando o sumiço de seus amigos revela a Ju e Rafa um grupo de agressores vindos da internet. Enquanto tentam sobreviver ao ataque, uma colega aparece para ajudar, transformando a noite de festa em um banho de sangue.  <br /><br />Curta-Metragem universitário realizado como Trabalho de Conclusão de Curso do diretor Eduardo Gomes.</>,
-        funcoes: "assistência de direção e montagem",
+        funcoes: "assistência de direção",
         link: "https://drive.google.com/file/d/1tliO9UMUqJRInbjKLdZstt1dngD8EEzv/view?usp=sharing",
         imagem: "/20001.png"
     },

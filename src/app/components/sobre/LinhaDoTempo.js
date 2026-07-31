@@ -2,8 +2,8 @@ export default function LinhaDoTempo() {
     const exps = [
         { period: '2025 — Atual', roleNormal: 'Freelancer de Edição de ', roleItalic: 'Vídeo', org: 'CAP Assessoria' },
         { period: '2025', roleNormal: 'Assistente de Marketing Digital', roleItalic: '', org: 'Falcor Travels & Secretariado do Brasil' },
-        { period: '2022–2023', roleNormal: 'Estágio em Edição de ', roleItalic: 'Vídeo', org: 'Secretariado do Brasil, Falcor & Pleno' },
-        { period: '2022', roleNormal: 'Estágio em Videomaker', roleItalic: '', org: 'Secretaria da Educação — Pref. Recife' },
+        { period: '2022–2023', roleNormal: 'Estágio em Edição de ', roleItalic: 'Vídeo', org: 'Falcor Travels, Secretariado do Brasil, & Pleno Treinamentos' },
+        { period: '2022', roleNormal: 'Estágio em Videomaker', roleItalic: '', org: 'Secretaria da Educação — Prefeitura do Recife' },
         { period: '2021', roleNormal: 'Estágio em Produção ', roleItalic: 'Televisiva', org: 'TV Universitária Recife' }
     ];
 
