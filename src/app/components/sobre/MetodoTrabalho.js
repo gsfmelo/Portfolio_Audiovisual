@@ -2,7 +2,7 @@ export default function MetodoTrabalho() {
   return (
     <section>
       {/* 2. O NOVO BANNER FOTO COM CITAÇÃO (TRANSITION SCENE) */}
-        <div className="relative w-full h-[40vh] min-h-[300px] flex items-center justify-center mt-8 mb-12 md:mt-12 md:mb-16 overflow-hidden shadow-inner">
+        <div className="relative w-full h-[40vh] min-h-[400px] flex items-center justify-center mt-8 mb-12 md:mt-12 md:mb-16 overflow-hidden shadow-inner">
         {/* A Imagem de Fundo */}
         <img
           src="/foto-working.jpg"

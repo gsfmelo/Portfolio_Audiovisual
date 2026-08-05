@@ -4,9 +4,11 @@ import HeroSobre from '../components/sobre/HeroSobre';
 import MetodoTrabalho from '../components/sobre/MetodoTrabalho';
 import Trajetoria from '../components/sobre/Trajetoria';
 import ServicosGrid from '../components/sobre/ServicosGrid';
+import CursosCertificacoes from '../components/sobre/CursosCertificacoes';
 import LinhaDoTempo from '../components/sobre/LinhaDoTempo';
 import DiferencialTech from '../components/sobre/DiferencialTech';
 import Personalidade from '../components/sobre/Personalidade';
+
 
 export default function Sobre() {
     return (
@@ -26,6 +28,8 @@ export default function Sobre() {
             <FadeIn><ServicosGrid /></FadeIn>
 
             <FadeIn><DiferencialTech /></FadeIn>
+
+            <FadeIn><CursosCertificacoes /></FadeIn>
 
             <FadeIn><Personalidade /></FadeIn>
 
