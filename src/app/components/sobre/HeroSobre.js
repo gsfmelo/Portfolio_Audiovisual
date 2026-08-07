@@ -16,7 +16,11 @@ export default function HeroSobre() {
             {/* Retrato com cantoneiras */}
             <div className="aspect-[4/5] bg-osso2 border border-preto/15 relative flex items-center justify-center w-full max-w-[400px] mx-auto lg:mx-0">
                 <span className="font-mono text-xs text-preto/35 uppercase tracking-widest">
-                    [ retrato ]
+                        <img
+          src="/fotocamera.jpg"
+          alt="Geovanna Melo no set de gravação"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
                 </span>
                 <div className="absolute top-4 left-4 w-4 h-4 border-t border-l border-vinho"></div>
                 <div className="absolute top-4 right-4 w-4 h-4 border-t border-r border-vinho"></div>

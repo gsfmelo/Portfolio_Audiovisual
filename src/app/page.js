@@ -46,27 +46,28 @@ export default function Home() {
           </div>
 
           {/* Lado Direito: Foto Emoldurada */}
-          <div className="relative w-full max-w-[420px] mx-auto lg:ml-auto mt-10 lg:mt-0">
-            <div className="absolute inset-0 translate-x-4 translate-y-4 border border-vinho/40"></div>
+{/* CONTAINER DA FOTO - Agora como um quadrado perfeito */}
+          <div className="relative w-full max-w-sm md:max-w-md aspect-square mx-auto lg:ml-auto">
+            
+            {/* Molduras / Cantoneiras (mantendo o seu design original) */}
+            <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-preto/40 z-10"></div>
+            <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-preto/40 z-10"></div>
+            <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-preto/40 z-10"></div>
+            <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-preto/40 z-10"></div>
 
-            <div className="aspect-[3/4] bg-osso2 border border-preto/15 relative z-10 flex flex-col items-center justify-center overflow-hidden group">
-              <img
-                src="/foto-home.jpg"
-                alt="Geovanna Melo"
-                className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 absolute inset-0 z-0"
-                onError={(e) => e.target.style.display = 'none'}
+            {/* O fundo deslocado (Opcional, se você quiser manter aquele efeito de sombra sólida bege atrás) */}
+            <div className="absolute top-4 left-1 w-full h-full border border-vinho/10 bg-osso2 -z-10"></div>
+
+            {/* A IMAGEM EM SI */}
+            {/* O 'p-4' ou 'p-6' dá aquele respiro entre a moldura e a foto */}
+            <div className="w-full h-full p-4 md:p-6">
+              <img 
+                src="/home.jpg" 
+                alt="Geovanna Melo - Realizadora e Editora" 
+                className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500" 
               />
-
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-osso2 text-preto/30 -z-10">
-                <span className="font-mono text-3xl">+</span>
-                <span className="font-mono text-xs tracking-widest uppercase mt-2">[ sua foto ]</span>
-              </div>
-
-              <div className="absolute top-4 left-4 w-4 h-4 border-t border-l border-osso z-20 mix-blend-difference"></div>
-              <div className="absolute top-4 right-4 w-4 h-4 border-t border-r border-osso z-20 mix-blend-difference"></div>
-              <div className="absolute bottom-4 left-4 w-4 h-4 border-b border-l border-osso z-20 mix-blend-difference"></div>
-              <div className="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-osso z-20 mix-blend-difference"></div>
             </div>
+
           </div>
 
         </section>
