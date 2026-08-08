@@ -21,13 +21,25 @@ export const projetosDestaque = [
         sinopse: <>Sinopse: Cláudia é uma mulher ansiosa e qualquer coisa é capaz de levar aos seus limites. Após receber uma ligação inesperada com um convite para se encontrar com uma amiga próxima, ela teme que, talvez, um segredo seu tenha sido descoberto. A amiga, por outro lado, só precisava de um motivo para tirar Cláudia de casa. <br /><br />Curta-Metragem aprovado pela Lei Paulo Gustavo Olinda 2023 e trabalho de conclusão de curso da diretora Geovanna Melo.</>,
         funcoes: "direção, roteiro e produção",
         link: "https://youtu.be/cHRQXVLH-w8",
-        imagem: "/telefone1.png"
+        imagem: "/telefone1.png",
+        still: "/stilltelefone.png"
     }
 ];
 
 export const projetosAplicado = [
-    {
+        {
         id: 3,
+        meta1: "CAMPANHA",
+        meta2: "2025",
+        tituloNormal: "Miss Universe",
+        tituloItalico: "PE",
+        sinopse: "Vídeos institucionais cobrindo trajes de banho, chegada e trajes de gala para as redes sociais oficiais.",
+        funcoes: "captação e edição",
+        link: "https://www.instagram.com/p/DRMhWaoDSly/",
+        imagem: ""
+    },
+    {
+        id: 4,
         meta1: "INSTITUCIONAL",
         meta2: "2022-25",
         tituloNormal: "Intercâmbio",
@@ -38,8 +50,8 @@ export const projetosAplicado = [
         imagem: ""
     },
     {
-        id: 4,
-        meta1: "TUTORIAIS",
+        id: 5,
+        meta1: "VIDEOS TUTORIAIS",
         meta2: "2026",
         tituloNormal: "Ferramentas Google",
         tituloItalico: "na Prática",
@@ -52,7 +64,18 @@ export const projetosAplicado = [
 
 export const projetosAutoral = [
     {
-        id: 5,
+        id: 6,
+        meta1: "CURTA · 14'",
+        meta2: "2024–26",
+        tituloNormal: "Quando o",
+        tituloItalico: "Telefone Tocar",
+        sinopse: <>Sinopse: Cláudia é uma mulher ansiosa e qualquer coisa é capaz de levar aos seus limites. Após receber uma ligação inesperada com um convite para se encontrar com uma amiga próxima, ela teme que, talvez, um segredo seu tenha sido descoberto. A amiga, por outro lado, só precisava de um motivo para tirar Cláudia de casa. <br /><br />Curta-Metragem aprovado pela Lei Paulo Gustavo Olinda 2023 e trabalho de conclusão de curso da diretora Geovanna Melo.</>,
+        funcoes: "direção, roteiro e produção",
+        link: "https://youtu.be/cHRQXVLH-w8",
+        imagem: "/telefone1.png"
+    },
+    {
+        id: 7,
         meta1: "MINIDOC · 4'",
         meta2: "2024",
         tituloNormal: "Beijos e",
@@ -63,7 +86,7 @@ export const projetosAutoral = [
         imagem: "/beijos1.png"
     },
     {
-        id: 6,
+        id: 8,
         meta1: "CURTA · 12'",
         meta2: "2019–21",
         tituloNormal: "Insônia",
@@ -74,7 +97,7 @@ export const projetosAutoral = [
         imagem: "/insonia1.jpeg"
     },
     {
-        id: 7,
+        id: 9,
         meta1: "ENSAIO · 12'",
         meta2: "2021",
         tituloNormal: "All About",
@@ -85,12 +108,12 @@ export const projetosAutoral = [
         imagem: "/love1.png"
     },
     {
-        id: 8,
+        id: 10,
         meta1: "INSTASÉRIE",
         meta2: "2019",
         tituloNormal: "Olívia",
         tituloItalico: "",
-        sinopse: <>Para dar vida a garota dos seus sonhos, Júlia cria um Instagram fictício, chamado Olívia. Um jogo de manipulação começa quando Júlia se sente ameaçada por Letícia, uma caloura que rouba a identidade exposta no perfil. <br /><br />Instasérie desenvolvida para a disciplina de Dispositivos Móveis no Audiovisual.</>,
+        sinopse: <>Sinopse: Para dar vida a garota dos seus sonhos, Júlia cria um Instagram fictício, chamado Olívia. Um jogo de manipulação começa quando Júlia se sente ameaçada por Letícia, uma caloura que rouba a identidade exposta no perfil. <br /><br />Instasérie desenvolvida para a disciplina de Dispositivos Móveis no Audiovisual.</>,
         funcoes: "direção, roteiro, produção e fotografia",
         link: "https://www.instagram.com/olivia_serie/",
         imagem: "/olivia1.png"
@@ -99,7 +122,7 @@ export const projetosAutoral = [
 
 export const projetosColaboracoes = [
         {
-        id: 9,
+        id: 11,
         meta1: "CURTA · 21'",
         meta2: "2026",
         tituloNormal: "Casa de ",
@@ -110,7 +133,7 @@ export const projetosColaboracoes = [
         imagem: "/vo1.jpg"
     },
         {
-        id: 10,
+        id: 12,
         meta1: "CURTA · 5'",
         meta2: "2025",
         tituloNormal: "Declaração de",
@@ -121,7 +144,7 @@ export const projetosColaboracoes = [
         imagem: "/declaracao1.png"
     },
     {
-        id: 11,
+        id: 13,
         meta1: "CURTA · 21'",
         meta2: "2024",
         tituloNormal: "2000.com",
@@ -132,7 +155,7 @@ export const projetosColaboracoes = [
         imagem: "/20001.png"
     },
     {
-        id: 12,
+        id: 14,
         meta1: "CURTA · 6'",
         meta2: "2022",
         tituloNormal: "ART",
@@ -143,7 +166,7 @@ export const projetosColaboracoes = [
         imagem: "/art1.png"
     },
     {
-    id: 13,
+    id: 15,
     meta1: "CURTA · 16'",
     meta2: "2019",
     tituloNormal: "Amar é",

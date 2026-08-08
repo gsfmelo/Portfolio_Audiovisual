@@ -14,19 +14,30 @@ export default function HeroSobre() {
             </div>
 
             {/* Retrato com cantoneiras */}
-            <div className="aspect-[4/5] bg-osso2 border border-preto/15 relative flex items-center justify-center w-full max-w-[400px] mx-auto lg:mx-0">
-                <span className="font-mono text-xs text-preto/35 uppercase tracking-widest">
-                        <img
-          src="/fotocamera.jpg"
-          alt="Geovanna Melo no set de gravação"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-                </span>
-                <div className="absolute top-4 left-4 w-4 h-4 border-t border-l border-vinho"></div>
-                <div className="absolute top-4 right-4 w-4 h-4 border-t border-r border-vinho"></div>
-                <div className="absolute bottom-4 left-4 w-4 h-4 border-b border-l border-vinho"></div>
-                <div className="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-vinho"></div>
+{/* Lado Direito: Foto Estilo Viewfinder Cinematográfico */}
+            <div className="relative w-full max-w-[300px] lg:max-w-[360px] aspect-[3/4] mx-auto lg:ml-auto lg:mr-8 group">
+            
+            {/* Marcas de Enquadramento (Viewfinder) com animação sutil */}
+            <div className="absolute top-0 left-0 w-6 h-6 border-t-[1.5px] border-l-[1.5px] border-preto/80 z-10 transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2 duration-500"></div>
+            <div className="absolute top-0 right-0 w-6 h-6 border-t-[1.5px] border-r-[1.5px] border-preto/80 z-10 transition-transform group-hover:translate-x-2 group-hover:-translate-y-2 duration-500"></div>
+            <div className="absolute bottom-0 left-0 w-6 h-6 border-b-[1.5px] border-l-[1.5px] border-preto/80 z-10 transition-transform group-hover:-translate-x-2 group-hover:translate-y-2 duration-500"></div>
+            <div className="absolute bottom-0 right-0 w-6 h-6 border-b-[1.5px] border-r-[1.5px] border-preto/80 z-10 transition-transform group-hover:translate-x-2 group-hover:translate-y-2 duration-500"></div>
+
+            {/* A Imagem */}
+            <div className="w-full h-full p-2">
+              <img 
+                src="/fotocamera.jpg" 
+                alt="Geovanna Melo com equipamento de câmera" 
+                className="w-full h-full object-cover object-center grayscale contrast-125 brightness-95 group-hover:grayscale-0 transition-all duration-700 shadow-xl" 
+              />
             </div>
+
+            {/* Detalhe técnico minimalista */}
+            <div className="absolute -right-8 bottom-12 rotate-90 font-mono text-[9px] tracking-[0.3em] text-preto/40 uppercase hidden md:block select-none">
+              REC // 24FPS
+            </div>
+
+          </div>
         </section>
     );
 }

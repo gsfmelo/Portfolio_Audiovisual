@@ -26,7 +26,7 @@ export default function Home() {
               Editora de vídeo e realizadora audiovisual. Do cinema à criação de conteúdo para marcas, unindo linguagem técnica e visão estética.
             </p>
 
-            {/* BOTÕES ATUALIZADOS */}
+            {/* BOTÕES */}
             <div className="mt-12 flex flex-col sm:flex-row gap-6">
               <Link
                 href="/projetos"
@@ -45,27 +45,27 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Lado Direito: Foto Emoldurada */}
-{/* CONTAINER DA FOTO - Agora como um quadrado perfeito */}
-          <div className="relative w-full max-w-sm md:max-w-md aspect-square mx-auto lg:ml-auto">
+          {/* Lado Direito: Foto Estilo Viewfinder Cinematográfico */}
+          <div className="relative w-full max-w-sm md:max-w-md aspect-square mx-auto lg:ml-auto group">
             
-            {/* Molduras / Cantoneiras (mantendo o seu design original) */}
-            <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-preto/40 z-10"></div>
-            <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-preto/40 z-10"></div>
-            <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-preto/40 z-10"></div>
-            <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-preto/40 z-10"></div>
+            {/* Marcas de Enquadramento (Viewfinder) com animação sutil */}
+            <div className="absolute top-0 left-0 w-6 h-6 border-t-[1.5px] border-l-[1.5px] border-preto/80 z-10 transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2 duration-500"></div>
+            <div className="absolute top-0 right-0 w-6 h-6 border-t-[1.5px] border-r-[1.5px] border-preto/80 z-10 transition-transform group-hover:translate-x-2 group-hover:-translate-y-2 duration-500"></div>
+            <div className="absolute bottom-0 left-0 w-6 h-6 border-b-[1.5px] border-l-[1.5px] border-preto/80 z-10 transition-transform group-hover:-translate-x-2 group-hover:translate-y-2 duration-500"></div>
+            <div className="absolute bottom-0 right-0 w-6 h-6 border-b-[1.5px] border-r-[1.5px] border-preto/80 z-10 transition-transform group-hover:translate-x-2 group-hover:translate-y-2 duration-500"></div>
 
-            {/* O fundo deslocado (Opcional, se você quiser manter aquele efeito de sombra sólida bege atrás) */}
-            <div className="absolute top-4 left-1 w-full h-full border border-vinho/10 bg-osso2 -z-10"></div>
-
-            {/* A IMAGEM EM SI */}
-            {/* O 'p-4' ou 'p-6' dá aquele respiro entre a moldura e a foto */}
-            <div className="w-full h-full p-4 md:p-6">
+            {/* A Imagem */}
+            <div className="w-full h-full p-2">
               <img 
                 src="/home.jpg" 
                 alt="Geovanna Melo - Realizadora e Editora" 
-                className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500" 
+                className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95 group-hover:grayscale-0 transition-all duration-700 shadow-xl" 
               />
+            </div>
+
+            {/* Detalhe técnico minimalista (tipo visor de câmera) */}
+            <div className="absolute -right-8 bottom-12 rotate-90 font-mono text-[9px] tracking-[0.3em] text-preto/40 uppercase hidden md:block select-none">
+              REC // 24FPS
             </div>
 
           </div>
@@ -73,7 +73,7 @@ export default function Home() {
         </section>
       </FadeIn>
 
-      {/* 2. PROJETOS EM DESTAQUE */}
+{/* 2. PROJETOS EM DESTAQUE */}
       <FadeIn>
         <section className="py-20 bg-preto/5 border-y border-preto/15">
           <div className="px-[6vw] md:px-[8vw] mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -94,40 +94,53 @@ export default function Home() {
           <div className="px-[6vw] md:px-[8vw]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-preto/15 border border-preto/15">
               {projetosDestaque && projetosDestaque.map((proj) => (
-                <div key={proj.id} className="bg-osso flex flex-col md:grid md:grid-cols-[300px_1fr] gap-8 p-8 md:p-10 transition-colors hover:bg-osso/80">
+                <div key={proj.id} className="bg-osso flex flex-col gap-5 p-6 md:p-8 h-full transition-colors hover:bg-osso/80">
 
-                  {/* Pôster */}
-                  <div className="aspect-[2/3] border border-dashed border-preto/30 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-osso2 to-osso relative overflow-hidden group">
-                    {proj.imagem ? (
-                      <img src={proj.imagem} alt={proj.tituloNormal} className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" />
+                  {/* Still em cima (Formato Tela de Cinema 16:9) */}
+                  <div className="w-full aspect-video border border-dashed border-preto/30 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-osso2 to-osso relative overflow-hidden group">
+                    {proj.still || proj.imagem ? (
+                      <img 
+                        src={proj.still || proj.imagem} 
+                        alt={proj.tituloNormal} 
+                        className="w-full h-full object-cover object-center grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
+                      />
                     ) : (
                       <>
                         <span className="font-mono text-3xl text-preto/25">+</span>
-                        <span className="font-mono text-xs text-preto/30 tracking-widest uppercase">pôster</span>
+                        <span className="font-mono text-xs text-preto/30 tracking-widest uppercase">still</span>
                       </>
                     )}
                   </div>
 
-                  {/* Infos do Card */}
-                  <div className="flex flex-col justify-between h-full">
-                    <div>
-                      <div className="flex justify-between font-mono text-xs md:text-sm text-vinho mb-3 uppercase tracking-wider font-medium">
-                        <span>{proj.meta1}</span>
-                        <span>{proj.meta2}</span>
-                      </div>
-                      <h3 className="font-serif font-medium text-3xl md:text-4xl leading-[1.1] text-preto">
-                        {proj.tituloNormal} <i className="italic font-light text-vinho">{proj.tituloItalico}</i>
-                      </h3>
-                      <p className="font-sans text-base md:text-lg text-preto/75 mt-4 leading-[1.6] italic">
-                        {proj.sinopse}
-                      </p>
+                  {/* Informações Enxutas embaixo */}
+                  <div className="flex flex-col flex-1 mt-2">
+                    
+                    {/* Tags */}
+                    <div className="flex justify-between items-center mb-3 border-b border-preto/15 pb-3">
+                      <span className="font-mono text-[10px] uppercase tracking-widest text-vinho">{proj.meta1}</span>
+                      <span className="font-mono text-[10px] uppercase text-vinho">{proj.meta2}</span>
                     </div>
-                    <div className="mt-8 pt-5 border-t border-preto/10">
-                      <div className="font-mono text-xs md:text-sm text-preto/60 uppercase tracking-widest">{proj.funcoes}</div>
-                      <div className="font-mono text-xs md:text-sm text-[#C99A3E] mt-2 font-medium hover:underline cursor-pointer tracking-widest">
-                        <a href={proj.link} target="_blank" rel="noopener noreferrer">[ ver projeto ]</a>
-                      </div>
+                    
+                    {/* Títulos */}
+                    <h3 className="font-serif font-medium text-2xl md:text-3xl text-preto leading-tight">
+                      {proj.tituloNormal} <i className="text-vinho font-light">{proj.tituloItalico}</i>
+                    </h3>
+                    
+                    {/* Funções e Link presos no rodapé da caixa */}
+                    <div className="mt-auto pt-6 flex items-center justify-between gap-4">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-preto/60">
+                        {proj.funcoes}
+                      </span>
+                      <a 
+                        href={proj.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="font-mono text-[10px] text-[#C99A3E] uppercase tracking-widest font-medium hover:underline whitespace-nowrap"
+                      >
+                        [ ver projeto ]
+                      </a>
                     </div>
+
                   </div>
                 </div>
               ))}
