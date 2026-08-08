@@ -3,17 +3,6 @@
 export const projetosDestaque = [
     {
         id: 1,
-        meta1: "CAMPANHA",
-        meta2: "2025",
-        tituloNormal: "Miss Universe",
-        tituloItalico: "PE",
-        sinopse: "Vídeos institucionais cobrindo trajes de banho, chegada e trajes de gala para as redes sociais oficiais.",
-        funcoes: "captação e edição",
-        link: "https://www.instagram.com/p/DRMhWaoDSly/",
-        imagem: ""
-    },
-    {
-        id: 2,
         meta1: "CURTA · 14'",
         meta2: "2024–26",
         tituloNormal: "Quando o",
@@ -23,7 +12,18 @@ export const projetosDestaque = [
         link: "https://youtu.be/cHRQXVLH-w8",
         imagem: "/telefone1.png",
         still: "/stilltelefone.png"
-    }
+    },
+        {
+        id: 2,
+        meta1: "CAMPANHA",
+        meta2: "2025",
+        tituloNormal: "Miss Universe",
+        tituloItalico: "PE",
+        sinopse: "Vídeos institucionais cobrindo trajes de banho, chegada e trajes de gala para as redes sociais oficiais.",
+        funcoes: "captação e edição",
+        link: "https://www.instagram.com/p/DRMhWaoDSly/",
+        imagem: ""
+    },
 ];
 
 export const projetosAplicado = [

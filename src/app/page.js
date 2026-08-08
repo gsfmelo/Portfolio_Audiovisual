@@ -11,26 +11,32 @@ export default function Home() {
       <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.04] mix-blend-multiply bg-[url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%22120%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')]"></div>
 
       {/* 1. HERO SECTION */}
+      {/* 1. HERO SECTION */}
       <FadeIn>
-        <section className="pt-24 pb-20 md:pt-32 md:pb-28 px-[6vw] md:px-[8vw] grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center min-h-[85vh]">
+        {/* Reduzi o pt-32 para pt-16 e o min-h-[85vh] para min-h-[70vh] para diminuir o espaço vazio acima */}
+        <section className="pt-12 pb-16 md:pt-16 md:pb-20 px-[6vw] md:px-[8vw] grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center min-h-[70vh]">
 
-          {/* Lado Esquerdo: Textos */}
+          {/* Lado Esquerdo: Textos (Menores e mais elegantes) */}
           <div>
-            <span className="font-mono text-sm tracking-[0.15em] uppercase text-vinho mb-6 block font-medium">
+            <span className="font-mono text-xs md:text-sm tracking-[0.15em] uppercase text-vinho mb-5 block font-medium">
               Geovanna Melo · Portfólio
             </span>
-            <h1 className="font-serif font-normal text-[clamp(44px,6vw,80px)] leading-[1.05] max-w-[1100px] text-preto mb-8">
+            
+            {/* O texto máximo desceu de 80px para 60px */}
+            <h1 className="font-serif font-normal text-[clamp(36px,4.5vw,60px)] leading-[1.05] max-w-[800px] text-preto mb-6">
               Organizando narrativas através do <i className="italic font-light text-vinho">corte certeiro.</i>
             </h1>
-            <p className="font-sans text-lg md:text-xl text-preto/75 max-w-[600px] leading-[1.6]">
+            
+            {/* A fonte do subtítulo desceu de xl para lg */}
+            <p className="font-sans text-base md:text-lg text-preto/75 max-w-[550px] leading-[1.6]">
               Editora de vídeo e realizadora audiovisual. Do cinema à criação de conteúdo para marcas, unindo linguagem técnica e visão estética.
             </p>
 
             {/* BOTÕES */}
-            <div className="mt-12 flex flex-col sm:flex-row gap-6">
+            <div className="mt-8 flex flex-col sm:flex-row gap-5">
               <Link
                 href="/projetos"
-                className="inline-block font-mono text-sm tracking-[0.1em] uppercase bg-preto text-osso py-4 px-10 hover:bg-vinho transition-colors text-center"
+                className="inline-block font-mono text-xs md:text-sm tracking-[0.1em] uppercase bg-preto text-osso py-3.5 px-8 hover:bg-vinho transition-colors text-center"
               >
                 Ver Projetos
               </Link>
@@ -38,17 +44,17 @@ export default function Home() {
                 href="/Portfólio Editora de Vídeo - Geovanna Melo.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block font-mono text-sm tracking-[0.1em] uppercase border border-preto/20 text-preto py-4 px-10 hover:border-preto hover:text-vinho transition-colors text-center"
+                className="inline-block font-mono text-xs md:text-sm tracking-[0.1em] uppercase border border-preto/20 text-preto py-3.5 px-8 hover:border-preto hover:text-vinho transition-colors text-center"
               >
                 Baixar Currículo
               </a>
             </div>
           </div>
 
-          {/* Lado Direito: Foto Estilo Viewfinder Cinematográfico */}
-          <div className="relative w-full max-w-sm md:max-w-md aspect-square mx-auto lg:ml-auto group">
+          {/* Lado Direito: Foto Quadrada (Como você gostou) */}
+          <div className="relative w-full max-w-[320px] lg:max-w-[400px] aspect-square mx-auto lg:ml-auto group mt-8 lg:mt-0">
             
-            {/* Marcas de Enquadramento (Viewfinder) com animação sutil */}
+            {/* Marcas de Enquadramento (Viewfinder) */}
             <div className="absolute top-0 left-0 w-6 h-6 border-t-[1.5px] border-l-[1.5px] border-preto/80 z-10 transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2 duration-500"></div>
             <div className="absolute top-0 right-0 w-6 h-6 border-t-[1.5px] border-r-[1.5px] border-preto/80 z-10 transition-transform group-hover:translate-x-2 group-hover:-translate-y-2 duration-500"></div>
             <div className="absolute bottom-0 left-0 w-6 h-6 border-b-[1.5px] border-l-[1.5px] border-preto/80 z-10 transition-transform group-hover:-translate-x-2 group-hover:translate-y-2 duration-500"></div>
@@ -63,7 +69,7 @@ export default function Home() {
               />
             </div>
 
-            {/* Detalhe técnico minimalista (tipo visor de câmera) */}
+            {/* Detalhe técnico */}
             <div className="absolute -right-8 bottom-12 rotate-90 font-mono text-[9px] tracking-[0.3em] text-preto/40 uppercase hidden md:block select-none">
               REC // 24FPS
             </div>
@@ -72,6 +78,44 @@ export default function Home() {
 
         </section>
       </FadeIn>
+
+{/* 1.5 TIRINHA DE CLIENTES / PARCEIROS (MARQUEE) */}
+      <div className="w-full bg-vinho text-osso py-4 md:py-5 overflow-hidden flex whitespace-nowrap border-y border-preto/15 relative">
+        
+        {/* Estilo local para a animação infinita */}
+        <style dangerouslySetInnerHTML={{__html: `
+          @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-marquee {
+            animation: marquee 40s linear infinite;
+          }
+        `}} />
+
+        {/* O container que rola */}
+        <div className="animate-marquee flex items-center w-max">
+          {/* A lista de nomes. Repetimos ela duas vezes no código para o loop ficar perfeito e sem buracos */}
+          {[...Array(2)].map((_, i) => (
+            <div key={i} className="flex items-center">
+              <span className="font-mono text-xs md:text-sm tracking-[0.2em] uppercase mx-8">Miss Universe PE</span>
+              <span className="text-[#C99A3E] text-lg mx-2">✦</span>
+              <span className="font-mono text-xs md:text-sm tracking-[0.2em] uppercase mx-8">Falcor Travels</span>
+              <span className="text-[#C99A3E] text-lg mx-2">✦</span>
+              <span className="font-mono text-xs md:text-sm tracking-[0.2em] uppercase mx-8">Viajar Para Itália</span>
+              <span className="text-[#C99A3E] text-lg mx-2">✦</span>
+              <span className="font-mono text-xs md:text-sm tracking-[0.2em] uppercase mx-8">Secretariado do Brasil</span>
+              <span className="text-[#C99A3E] text-lg mx-2">✦</span>
+                            <span className="font-mono text-xs md:text-sm tracking-[0.2em] uppercase mx-8">Pleno Treinamentos</span>
+              <span className="text-[#C99A3E] text-lg mx-2">✦</span>
+              <span className="font-mono text-xs md:text-sm tracking-[0.2em] uppercase mx-8">Secretaria da Educação da Prefeitura do Recife</span>
+              <span className="text-[#C99A3E] text-lg mx-2">✦</span>
+              <span className="font-mono text-xs md:text-sm tracking-[0.2em] uppercase mx-8">TV Universitária Recife</span>
+              <span className="text-[#C99A3E] text-lg mx-2">✦</span>
+            </div>
+          ))}
+        </div>
+      </div>
 
 {/* 2. PROJETOS EM DESTAQUE */}
       <FadeIn>
