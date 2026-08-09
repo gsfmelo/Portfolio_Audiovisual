@@ -7,11 +7,11 @@ import BackToTop from './components/BackToTop';
 export const metadata = {
   title: {
     template: '%s | Geovanna Melo',
-    default: 'Geovanna Melo — Editora de Vídeo & Realizadora',
+    default: 'Geovanna Melo — Realizadora Audiovisual e Editora de Vídeo',
   },
-  description: 'Portfólio de Geovanna Melo. Editora de vídeo e realizadora audiovisual. Organizando narrativas através do corte certeiro.',
+  description: 'Portfólio de Geovanna Melo. Realizadora audiovisual e editora de vídeo. Do cinema à criação de conteúdo para marcas.',
   openGraph: {
-    title: 'Geovanna Melo — Editora de Vídeo & Realizadora',
+    title: 'Geovanna Melo — Realizadora Audiovisual e Editora de Vídeo',
     description: 'Do cinema à criação de conteúdo para marcas. Conheça a mostra completa de trabalhos e trajetória.',
     url: 'https://seusite.com.br', // Substitua pelo seu domínio quando publicar
     siteName: 'Portfólio Geovanna Melo',
@@ -25,13 +25,7 @@ export const metadata = {
     ],
     locale: 'pt_BR',
     type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Geovanna Melo — Audiovisual',
-    description: 'Organizando narrativas através do corte certeiro.',
-    images: ['/og-image.jpg'],
-  },
+  }
 };
 
 export default function RootLayout({ children }) {
@@ -70,7 +64,7 @@ export default function RootLayout({ children }) {
         {/* RODAPÉ (FOOTER) */}
         <footer className="py-8 px-[6vw] md:px-[8vw] flex flex-col sm:flex-row justify-between items-center gap-4 font-mono text-[12px] text-preto/70 tracking-widest uppercase mt-auto bg-osso">
           <span>© 2026 Geovanna Melo</span>
-          <span>Editora de Vídeo & Realizadora</span>
+          <span>Realizadora Audiovisual, Videomaker, Editora de Vídeo & Estrategista de Conteúdo</span>
         </footer>
 
         {/* BOTÃO VOLTAR AO TOPO FLUTUANTE */}

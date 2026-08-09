@@ -65,7 +65,7 @@ export default function Home() {
               <img 
                 src="/home.jpg" 
                 alt="Geovanna Melo - Realizadora e Editora" 
-                className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95 group-hover:grayscale-0 transition-all duration-700 shadow-xl" 
+                className="w-full h-full object-cover object-top grayscale contrast-110 brightness-95 group-hover:grayscale-0 transition-all duration-700 shadow-xl" 
               />
             </div>
 

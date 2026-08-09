@@ -110,14 +110,35 @@ function Carrossel({ projetos }) {
                                 <h3 className="font-serif font-medium text-2xl md:text-3xl leading-[1.15] text-preto">
                                     {proj.tituloNormal} <i className="italic font-light text-vinho">{proj.tituloItalico}</i>
                                 </h3>
-                                <p className="font-sans text-sm md:text-base text-preto/75 mt-3 leading-[1.65] italic">
+                                <p className="font-sans text-sm md:text-[15px] text-preto/75 mt-3 leading-[1.5] italic">
                                     {proj.sinopse}
                                 </p>
                             </div>
+{/* Rodapé do card dentro do Carrossel */}
                             <div className="mt-6 pt-4 border-t border-preto/10">
-                                <div className="font-mono text-xs md:text-sm text-preto/60 uppercase tracking-widest">{proj.funcoes}</div>
-                                <div className="font-mono text-xs md:text-sm text-[#C99A3E] mt-2 font-medium hover:underline cursor-pointer tracking-widest">
-                                    <a href={proj.link} target="_blank" rel="noopener noreferrer">[ ver projeto ]</a>
+                                <div className="font-mono text-xs md:text-sm text-preto/60 uppercase tracking-widest">
+                                    {proj.funcoes}
+                                </div>
+                                
+                                {/* Container para empilhar os links */}
+                                <div className="flex flex-col gap-2 mt-2">
+                                    {/* Link 1 (Sempre aparece) */}
+                                    {proj.link && (
+                                        <div className="font-mono text-xs md:text-sm text-[#C99A3E] font-medium hover:underline cursor-pointer tracking-widest">
+                                            <a href={proj.link} target="_blank" rel="noopener noreferrer">
+                                                {proj.textoLink || "[ ver projeto ]"}
+                                            </a>
+                                        </div>
+                                    )}
+                                    
+                                    {/* Link 2 (Só aparece se você preencheu no projetos.js) */}
+                                    {proj.link2 && (
+                                        <div className="font-mono text-xs md:text-sm text-[#C99A3E] font-medium hover:underline cursor-pointer tracking-widest">
+                                            <a href={proj.link2} target="_blank" rel="noopener noreferrer">
+                                                {proj.textoLink2 || "[ ver projeto 2 ]"}
+                                            </a>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -145,7 +166,7 @@ export default function Projetos() {
             {/* CABEÇALHO (Hero Ampliado) */}
             <FadeIn>
                 <section className="pt-20 pb-12 px-[6vw] md:px-[8vw]">
-                    <span className="font-mono text-sm tracking-[0.15em] uppercase text-vinho mb-4 block font-medium">Projetos · 13 trabalhos</span>
+                    <span className="font-mono text-sm tracking-[0.15em] uppercase text-vinho mb-4 block font-medium">Projetos · 14 trabalhos</span>
                     <h1 className="font-serif font-normal text-[clamp(40px,5vw,64px)] leading-[1.1] max-w-[900px] text-preto">
                         Tudo o que já <i className="italic font-light text-vinho">contei</i> em vídeo
                     </h1>
@@ -196,18 +217,38 @@ export default function Projetos() {
                                     </h3>
                                     
                                     {/* Funções e Link presos no rodapé da caixa */}
-                                    <div className="mt-auto pt-6 flex items-center justify-between gap-4">
-                                        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-preto/60">
-                                            {proj.funcoes}
-                                        </span>
+                                    {/* Funções e Links presos no rodapé da caixa */}
+                                    <div className="mt-auto pt-6 flex items-end justify-between gap-4">
+                                    <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-preto/60">
+                                        {proj.funcoes}
+                                    </span>
+                                    
+                                    {/* Agrupamento dos links (alinhados à direita) */}
+                                    <div className="flex flex-col items-end gap-2">
+                                        {/* Link 1 (Sempre aparece se existir) */}
+                                        {proj.link && (
                                         <a 
                                             href={proj.link} 
                                             target="_blank" 
                                             rel="noopener noreferrer" 
                                             className="font-mono text-[10px] text-[#C99A3E] uppercase tracking-widest font-medium hover:underline whitespace-nowrap"
                                         >
-                                            [ ver projeto ]
+                                            {proj.textoLink || "[ ver projeto ]"}
                                         </a>
+                                        )}
+
+                                        {/* Link 2 (Só aparece se você preencher o link2 lá no projetos.js) */}
+                                        {proj.link2 && (
+                                        <a 
+                                            href={proj.link2} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            className="font-mono text-[10px] text-[#C99A3E] uppercase tracking-widest font-medium hover:underline whitespace-nowrap"
+                                        >
+                                            {proj.textoLink2 || "[ ver projeto 2 ]"}
+                                        </a>
+                                        )}
+                                    </div>
                                     </div>
 
                                 </div>
@@ -219,7 +260,7 @@ export default function Projetos() {
 
             {/* SEÇÃO 02: MODO APLICADO */}
             <FadeIn>
-                <DivisorCategoria idx="02" texto="modo conteúdo" contagem="2 trabalhos · arraste ou use as setas" />
+                <DivisorCategoria idx="02" texto="modo conteúdo" contagem="4 trabalhos · arraste ou use as setas" />
                 <section className="pt-8 pb-20 px-[6vw] md:px-[8vw]">
                     <div className="mb-10">
                         <h2 className="font-serif font-normal text-4xl text-preto">Marketing &amp; <i className="italic font-light text-vinho">conteúdo</i></h2>
@@ -243,7 +284,7 @@ export default function Projetos() {
 
             {/* SEÇÃO 04: COLABORAÇÕES */}
             <FadeIn>
-                <DivisorCategoria idx="04" texto="colaborações" contagem="3 trabalhos · arraste ou use as setas" />
+                <DivisorCategoria idx="04" texto="colaborações" contagem="5 trabalhos · arraste ou use as setas" />
                 <section className="pt-8 pb-20 px-[6vw] md:px-[8vw]">
                     <div className="mb-10">
                         <h2 className="font-serif font-normal text-4xl text-preto">Onde atuei <i className="italic font-light text-vinho">em funções-chave</i></h2>

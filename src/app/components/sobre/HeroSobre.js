@@ -6,10 +6,10 @@ export default function HeroSobre() {
                     Sobre
                 </span>
                 <h1 className="font-serif font-normal text-[clamp(40px,5vw,64px)] leading-[1.1]">
-                    Edito pra <i className="italic font-light text-vinho">convencer.</i> Dirijo pra <i className="italic font-light text-vinho">ficar.</i>
+                    Meu trabalho começa <i className="italic font-light text-vinho">antes</i> do <i className="italic font-light text-vinho">primeiro corte.</i>
                 </h1>
                 <div className="font-mono text-xs md:text-sm tracking-[0.1em] uppercase text-preto/60 mt-6 font-medium">
-                    realizadora audiovisual · editora de vídeo · estrategista de conteúdo
+                    realizadora audiovisual · videomaker · editora de vídeo · estrategista de conteúdo
                 </div>
             </div>
 
@@ -28,7 +28,7 @@ export default function HeroSobre() {
               <img 
                 src="/fotocamera.jpg" 
                 alt="Geovanna Melo com equipamento de câmera" 
-                className="w-full h-full object-cover object-center grayscale contrast-125 brightness-95 group-hover:grayscale-0 transition-all duration-700 shadow-xl" 
+                className="w-full h-full object-cover object-center grayscale contrast-110 brightness-95 group-hover:grayscale-0 transition-all duration-700 shadow-xl" 
               />
             </div>
 

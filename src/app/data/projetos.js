@@ -15,56 +15,70 @@ export const projetosDestaque = [
     },
         {
         id: 2,
-        meta1: "CAMPANHA",
+        meta1: "CAMPANHA FREELA",
         meta2: "2025",
         tituloNormal: "Miss Universe",
         tituloItalico: "PE",
         sinopse: "Vídeos institucionais cobrindo trajes de banho, chegada e trajes de gala para as redes sociais oficiais.",
         funcoes: "captação e edição",
         link: "https://www.instagram.com/p/DRMhWaoDSly/",
-        imagem: ""
+        imagem: "/sabrina.png"
     },
 ];
 
 export const projetosAplicado = [
         {
         id: 3,
-        meta1: "CAMPANHA",
-        meta2: "2025",
-        tituloNormal: "Miss Universe",
-        tituloItalico: "PE",
-        sinopse: "Vídeos institucionais cobrindo trajes de banho, chegada e trajes de gala para as redes sociais oficiais.",
-        funcoes: "captação e edição",
-        link: "https://www.instagram.com/p/DRMhWaoDSly/",
-        imagem: ""
-    },
-    {
-        id: 4,
-        meta1: "INSTITUCIONAL",
-        meta2: "2022-25",
-        tituloNormal: "Intercâmbio",
-        tituloItalico: "Malta & Itália",
-        sinopse: "Propagandas, vídeos para redes sociais e playlists no Youtube focadas em agências de intercâmbio e viagens.",
-        funcoes: "roteiro, edição e playlists",
-        link: "https://youtube.com/playlist?list=PLAVgLBTJxPY_orEihohwZGapM9ZmL-Dky&si=LIIUhM_ybmAI9BCU",
-        imagem: ""
-    },
-    {
-        id: 5,
         meta1: "VIDEOS TUTORIAIS",
         meta2: "2026",
         tituloNormal: "Ferramentas Google",
         tituloItalico: "na Prática",
-        sinopse: <>O projeto "Inclusão Digital: Ferramentas Google para Aprendizagem na Prática." consiste em uma série de quatro vídeos tutoriais simples, criados para capacitar estudantes no uso de ferramentas Google. <br /><br />Projeto idealizado e desenvolvido como parte das Atividades Extensionistas do curso de Análise e Desenvolvimento de Sistemas.</>,
+        sinopse: <>O projeto consiste em uma série de quatro vídeos tutoriais simples, criados para capacitar estudantes idosos no uso de ferramentas Google. Os vídeos foram disponibilzados no YouTube de maneira gratuita.<br /><br />Projeto idealizado e desenvolvido como parte das Atividades Extensionistas do curso de Análise e Desenvolvimento de Sistemas.</>,
         funcoes: "roteiro, produção, edição e finalização",
         link: "https://www.youtube.com/playlist?list=PLAtXrirtaARc",
         imagem: "/ferramentas1.png"
+    },
+    {
+        id: 4,
+        meta1: "CAMPANHA FREELA",
+        meta2: "2025",
+        tituloNormal: "Miss Universe",
+        tituloItalico: "PE",
+        sinopse: "Vídeos institucionais cobrindo trajes de banho, chegada das candidatas, entrevistas e trajes de gala para as redes sociais oficiais.",
+        funcoes: "captação e edição",
+        link: "https://www.instagram.com/p/DRMhWaoDSly/",
+        imagem: "/mupever.png"
+    },
+    {
+        id: 5,
+        meta1: "INSTITUCIONAL",
+        meta2: "2022-25",
+        tituloNormal: "Conteúdos Institucionais",
+        tituloItalico: "Publicidade, Educação e Viagens",
+        sinopse: "Propagandas e vídeos para redes sociais focados em conteúdo educacional, intercâmbio em Malta. Vídeos realizados para a operadora de viagens Falcor Travels e para a empresa Secretariado do Brasil, conhecida pelos seus cursos de desenvolvimento profissional e de idiomas.",
+        funcoes: "roteiro, edição e playlists",
+        link: "https://drive.google.com/drive/folders/1diUXobGur3hpaWqHAUNzYOyHiJDOvmDB?usp=drive_link",
+        imagem: "/erci1.png"
+    },
+    {
+        id: 6,
+        meta1: "CONTEÚDO",
+        meta2: "2022-23",
+        tituloNormal: "Vídeos e Vlogs de Viagem",
+        tituloItalico: "Malta & Itália",
+        sinopse: "Vídeos de viagem informativos, vlogs e playlists focadas em destinos turísticos em Malta e na Itália. Vídeos postados no canal do Youtube da operadora de viagens Falcor Travels.",
+        funcoes: "edição",
+        link: "https://www.youtube.com/playlist?list=PLo5URVrTn-IDM8xkZEr5JB_2NmhvLJ8Yj",
+        textoLink: "[ playlist malta ]",
+        link2: "https://www.youtube.com/playlist?list=PLo5URVrTn-IABtOZi3fbkYWJRx6Ydh_Kj",
+        textoLink2: "[ playlist itália ]",
+        imagem: "/maltaetc.png"
     }
 ];
 
 export const projetosAutoral = [
     {
-        id: 6,
+        id: 7,
         meta1: "CURTA · 14'",
         meta2: "2024–26",
         tituloNormal: "Quando o",
@@ -75,7 +89,7 @@ export const projetosAutoral = [
         imagem: "/telefone1.png"
     },
     {
-        id: 7,
+        id: 8,
         meta1: "MINIDOC · 4'",
         meta2: "2024",
         tituloNormal: "Beijos e",
@@ -86,7 +100,7 @@ export const projetosAutoral = [
         imagem: "/beijos1.png"
     },
     {
-        id: 8,
+        id: 9,
         meta1: "CURTA · 12'",
         meta2: "2019–21",
         tituloNormal: "Insônia",
@@ -97,7 +111,7 @@ export const projetosAutoral = [
         imagem: "/insonia1.jpeg"
     },
     {
-        id: 9,
+        id: 10,
         meta1: "ENSAIO · 12'",
         meta2: "2021",
         tituloNormal: "All About",
@@ -108,7 +122,7 @@ export const projetosAutoral = [
         imagem: "/love1.png"
     },
     {
-        id: 10,
+        id: 11,
         meta1: "INSTASÉRIE",
         meta2: "2019",
         tituloNormal: "Olívia",
@@ -122,7 +136,7 @@ export const projetosAutoral = [
 
 export const projetosColaboracoes = [
         {
-        id: 11,
+        id: 12,
         meta1: "CURTA · 21'",
         meta2: "2026",
         tituloNormal: "Casa de ",
@@ -133,7 +147,7 @@ export const projetosColaboracoes = [
         imagem: "/vo1.jpg"
     },
         {
-        id: 12,
+        id: 13,
         meta1: "CURTA · 5'",
         meta2: "2025",
         tituloNormal: "Declaração de",
@@ -144,7 +158,7 @@ export const projetosColaboracoes = [
         imagem: "/declaracao1.png"
     },
     {
-        id: 13,
+        id: 14,
         meta1: "CURTA · 21'",
         meta2: "2024",
         tituloNormal: "2000.com",
@@ -155,7 +169,7 @@ export const projetosColaboracoes = [
         imagem: "/20001.png"
     },
     {
-        id: 14,
+        id: 15,
         meta1: "CURTA · 6'",
         meta2: "2022",
         tituloNormal: "ART",
@@ -166,7 +180,7 @@ export const projetosColaboracoes = [
         imagem: "/art1.png"
     },
     {
-    id: 15,
+    id: 16,
     meta1: "CURTA · 16'",
     meta2: "2019",
     tituloNormal: "Amar é",

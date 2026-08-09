@@ -17,7 +17,7 @@ export default function ServicosGrid() {
                     </div>
 
                     <div>
-                        <h3 className="font-serif italic font-normal text-2xl md:text-3xl text-vinho mb-6">Conteúdo & marketing</h3>
+                        <h3 className="font-serif italic font-normal text-2xl md:text-3xl text-vinho mb-6">Conteúdo & Marketing</h3>
                         <div className="flex flex-wrap gap-3">
                             {['Captação', 'Storytelling', 'Linha editorial', 'Copywriting', 'Calendário de Planejamento', 'Metodologias Ágeis', 'Ferramentas de IA'].map(tag => (
                                 <span key={tag} className="font-mono text-xs md:text-sm text-preto/70 border border-preto/15 px-4 py-2 uppercase tracking-wider">{tag}</span>

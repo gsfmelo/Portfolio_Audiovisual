@@ -17,7 +17,7 @@ export default function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className="font-serif italic text-2xl hover:opacity-75 transition-opacity"
                 >
-                    geovanna <span className="text-vinho">melo</span>
+                    Geovanna <span className="text-vinho">Melo</span>
                 </Link>
 
                 <div className="hidden md:block">
@@ -48,16 +48,16 @@ export default function Navbar() {
                     </div>
                     <div className="flex flex-col gap-8 font-serif text-3xl sm:text-4xl">
                         <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-vinho transition-colors">
-                            home <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/ início</span>
+                            home <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/home</span>
                         </Link>
                         <Link href="/projetos" onClick={() => setIsOpen(false)} className="hover:text-vinho transition-colors">
-                            projetos <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/ portfólio e curtas</span>
+                            projetos <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/ projetos</span>
                         </Link>
                         <Link href="/sobre" onClick={() => setIsOpen(false)} className="hover:text-vinho transition-colors">
-                            sobre <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/ posicionamento e bio</span>
+                            sobre <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/sobre</span>
                         </Link>
                         <Link href="/contato" onClick={() => setIsOpen(false)} className="hover:text-vinho transition-colors">
-                            contato <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/ e-mail e whatsapp</span>
+                            contato <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/contato</span>
                         </Link>
                     </div>
                 </div>
