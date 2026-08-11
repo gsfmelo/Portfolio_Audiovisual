@@ -7,7 +7,7 @@ export const projetosDestaque = [
         meta2: "2024–26",
         tituloNormal: "Quando o",
         tituloItalico: "Telefone Tocar",
-        sinopse: <>Sinopse: Cláudia é uma mulher ansiosa e qualquer coisa é capaz de levar aos seus limites. Após receber uma ligação inesperada com um convite para se encontrar com uma amiga próxima, ela teme que, talvez, um segredo seu tenha sido descoberto. A amiga, por outro lado, só precisava de um motivo para tirar Cláudia de casa. <br /><br />Curta-Metragem aprovado pela Lei Paulo Gustavo Olinda 2023 e trabalho de conclusão de curso da diretora Geovanna Melo.</>,
+        sinopse: <>Sinopse: Cláudia é uma mulher ansiosa e qualquer coisa é capaz de levar aos seus limites. Após receber uma ligação inesperada com um convite para se encontrar com uma amiga próxima, ela teme que, talvez, um segredo seu tenha sido descoberto. A amiga, por outro lado, só precisava de um motivo para tirar Cláudia de casa. <br /><br /> Curta-Metragem aprovado pela Lei Paulo Gustavo Olinda 2023 e trabalho de conclusão de curso da diretora Geovanna Melo.</>,
         funcoes: "direção, roteiro e produção",
         link: "https://youtu.be/cHRQXVLH-w8",
         imagem: "/telefone1.png",
