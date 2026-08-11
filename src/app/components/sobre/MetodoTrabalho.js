@@ -5,7 +5,7 @@ export default function MetodoTrabalho() {
         <div className="relative w-full h-[40vh] min-h-[500px] flex items-center justify-center mt-8 mb-12 md:mt-12 md:mb-16 overflow-hidden shadow-inner">
         {/* A Imagem de Fundo */}
         <img
-          src="/trabalho1.jpg"
+          src="/trabalho1.png"
           alt="Geovanna Melo no set de gravação e edição"
           className="absolute inset-0 w-full h-full object-cover"
         />

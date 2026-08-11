@@ -144,7 +144,7 @@ export const projetosColaboracoes = [
         sinopse: <>Sinopse: Após a morte de sua avó, o jovem Gabriel enfrenta um fim de ano melancólico, marcado pela nova e fragmentada dinâmica familiar. O curta mergulha na jornada emocional do neto, que, em meio à dor da perda, revisita as memórias afetivas e as tradições compartilhadas com a avó em sua casa de praia. <br /><br />Curta-Metragem aprovado pela Lei Paulo Gustavo Paulista 2024. Atualmente em fase de pós-produção.</>,
         funcoes: "assistência de direção",
         link: "",
-        imagem: "/vo1.jpg"
+        imagem: "/vo1.png"
     },
         {
         id: 13,
