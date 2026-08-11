@@ -5,7 +5,7 @@ export default function MetodoTrabalho() {
         <div className="relative w-full h-[40vh] min-h-[500px] flex items-center justify-center mt-8 mb-12 md:mt-12 md:mb-16 overflow-hidden shadow-inner">
         {/* A Imagem de Fundo */}
         <img
-          src="/trabalho2.jpg"
+          src="/trabalho1.jpg"
           alt="Geovanna Melo no set de gravação e edição"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -18,7 +18,7 @@ export default function MetodoTrabalho() {
           <span className="w-12 h-[1px] bg-[#C99A3E]/70 block mb-2"></span>
           
           <h2 className="font-serif italic font-light text-[clamp(26px,4vw,44px)] leading-[1.3] text-osso">
-            "Meu trabalho começa onde a edição encontra a escuta — cortar bem é, antes de tudo, saber o que vale a pena guardar."
+            "Gosto de estar onde diferentes ideias se encontram. É dali que surgem as melhores formas de criar."
           </h2>
           
           <span className="w-12 h-[1px] bg-[#C99A3E]/70 block mt-2"></span>

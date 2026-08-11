@@ -19,6 +19,13 @@ export default function CursosCertificacoes() {
       tipo: "tech"
     },
     {
+      ano: "2023-2024",
+      instituicao: "Universidade Federal de Pernambuco",
+      curso: "Bolsista do Programa de Bolsas de Incentivo à Criação Cultural",
+      tipo: "audiovisual"
+
+    },
+    {
       ano: "2021",
       instituicao: "Espreita Filmes",
       curso: "Oficina de Assistência de Direção",
@@ -33,10 +40,10 @@ export default function CursosCertificacoes() {
         {/* Cabeçalho */}
         <div className="mb-12 md:mb-16">
           <span className="font-mono text-xs md:text-sm tracking-[0.15em] uppercase text-vinho mb-4 block font-medium">
-            Formação Contínua
+            Além da Sala de Aula
           </span>
           <h2 className="font-serif font-normal text-[clamp(32px,4vw,48px)] leading-[1.1] tracking-tight text-preto">
-            Cursos & <i className="font-light italic text-[#C99A3E]">Certificações</i>
+            Laboratórios, Bolsas &<i className="font-light italic text-[#C99A3E]"> Imersões</i>
           </h2>
         </div>
 

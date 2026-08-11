@@ -64,8 +64,23 @@ export default function Contato() {
               <div>
                 <span className="font-mono text-xs uppercase tracking-widest text-preto/50 block mb-2 mt-4">Redes e Conexões</span>
                 <div className="flex gap-6 font-mono text-xs md:text-sm uppercase tracking-widest">
-                  <a href="https://www.instagram.com/stillfilmbuff/" className="text-preto hover:text-vinho underline decoration-preto/20 underline-offset-4">Instagram</a>
-                  <a href="https://www.linkedin.com/in/geovanna-melo/" className="text-preto hover:text-vinho underline decoration-preto/20 underline-offset-4">LinkedIn</a>
+
+                  <a 
+                    href="https://www.linkedin.com/in/geovanna-melo/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="seu-codigo-de-estilo-do-tailwind-aqui"
+                  >
+                    LinkedIn
+                  </a>
+                  <a 
+                    href="https://instagram.com/stillfilmbuff" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="seu-codigo-de-estilo-do-tailwind-aqui"
+                  >
+                    Instagram
+                  </a>
                 </div>
               </div>
             </div>

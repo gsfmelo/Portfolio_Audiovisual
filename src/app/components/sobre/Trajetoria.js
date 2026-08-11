@@ -1,36 +1,34 @@
 export default function Trajetoria() {
     return (
-        <section className="px-[6vw] md:px-[8vw] pb-16">
-            {/* Seção Como Eu Penso - Layout Centralizado e Compacto */}
-<div className="py-16 md:py-20 border-t border-preto/10 px-[6vw] md:px-[8vw] flex flex-col items-center">
-    
-    <div className="max-w-[700px] w-full">
-        {/* Tag (Agora em cima, agrupada com o título) */}
-        <span className="font-mono text-xs md:text-sm tracking-[0.2em] uppercase text-[#C84A31] mb-5 block">
-            Como eu penso
-        </span>
+<section className="py-24 md:py-32 px-[6vw] md:px-[8vw] border-y border-preto/15">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         
-        {/* Título */}
-        <h3 className="font-serif italic text-2xl md:text-3xl text-[#C84A31] mb-8 leading-[1.2]">
-            Eu gosto de conectar o que não parecer fazer sentido.
-        </h3>
-        
-        {/* Textos */}
-        <div className="font-sans text-[15px] md:text-base text-preto/80 leading-[1.65] space-y-6">
+        {/* Coluna da Esquerda: Título (Ocupa 5 de 12 colunas no desktop) */}
+        <div className="lg:col-span-5 lg:sticky lg:top-32">
+            <span className="font-mono text-xs md:text-sm tracking-[0.15em] uppercase text-vinho mb-6 block font-medium">
+                Como eu penso
+            </span>
+            <h2 className="font-serif font-normal text-3xl md:text-[clamp(36px,4vw,48px)] leading-[1.1] text-preto">
+                <i className="italic font-light text-vinho">Eu gosto de conectar</i> o que não parece fazer sentido.
+            </h2>
+        </div>
+
+        {/* Coluna da Direita: Textos (Ocupa 7 de 12 colunas no desktop) */}
+        <div className="lg:col-span-7 flex flex-col gap-6 md:gap-8 font-sans text-base md:text-lg text-preto/80 leading-[1.7]">
             <p>
-                Cinema, comunicação, marketing e tecnologia. Minha trajetória profissional e acadêmica passa por diferentes áreas, e é justamente nesse <strong>cruzamento </strong>que encontro meu diferencial como uma <strong>profissional multidisciplinar.</strong>
-                Acredito que o audiovisual e a tecnologia compartilham a mesma essência: <strong>organizar o caos e estruturar a lógica para resolver um problema</strong>. Sou uma profissional multidisciplinar que constrói pontes entre a criatividade pura e a execução estratégica.
+                Cinema, comunicação, marketing e tecnologia. Minha trajetória profissional e acadêmica passa por diferentes áreas, e é justamente nesse <strong>cruzamento</strong> que encontro meu diferencial como uma <strong>profissional multidisciplinar</strong>. Construo pontes entre a criatividade e a execução estratégica, guiada pelo pensamento lógico.
             </p>
+            
             <p>
-                Minha formação em Cinema me deu o domínio da linguagem estética e narrativa. A direção e a montagem me ensinaram a gerenciar equipes, orçamentos e o <i>timing</i> humano de uma história. Ao mesmo tempo, minha imersão atual em Análise e Desenvolvimento de Sistemas moldou um <strong>olhar analítico, ágil e focado em arquitetar soluções escaláveis</strong>. 
+                Minha formação em Cinema e Audiovisual me deu o domínio da linguagem estética e estrutura narrativa. A direção e a montagem me ensinaram a gerenciar projetos, orçamentos e equipes. Ao mesmo tempo, minha imersão atual em Análise e Desenvolvimento de Sistemas moldou um <strong>olhar ágil</strong> e focado em arquitetar soluções escaláveis para <strong>otimização de processos</strong>.
             </p>
+            
             <p>
-                Transitar por múltiplas áreas me permite enxergar o cenário macro. Seja orquestrando a retenção de uma campanha, dirigindo um curta-metragem autoral ou analisando a estrutura de um projeto, eu aplico a mesma regra: <strong>entender o sistema por trás da obra e otimizá-lo para o melhor resultado possível</strong>.
+                No fim, meu trabalho nasce justamente dessas <strong>conexões</strong>. Entre imagem e lógica, criação e estratégia, sensibilidade e estrutura. É nesse espaço entre áreas que encontro novas maneiras de pensar, criar e <strong>fazer as coisas acontecerem.</strong>
             </p>
         </div>
-    </div>
 
-</div>
-        </section>
+    </div>
+</section>
     );
 }

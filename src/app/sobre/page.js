@@ -34,14 +34,15 @@ export default function Sobre() {
             <FadeIn><Personalidade /></FadeIn>
 
             {/* 7. FECHAMENTO CTA BANNER */}
+{/* 7. FECHAMENTO CTA BANNER */}
             <FadeIn>
-                <div className="w-full bg-[#C84A31] text-[#FAF4E6] py-28 md:py-36 px-[6vw] md:px-[8vw] flex flex-col items-center justify-center text-center">
-                    <h2 className="font-serif font-normal text-[clamp(36px,5vw,64px)] leading-tight mb-10 max-w-4xl">
-                        Já viu os meus <i className="font-light italic">trabalhos?</i>
+                <div className="bg-vinho text-osso text-center py-24 md:py-32 px-[8vw] mt-10">
+                    <h2 className="font-serif italic font-normal text-[clamp(32px,5vw,52px)]">
+                        Já viu os meus trabalhos?
                     </h2>
-                    <Link
-                        href="/projetos"
-                        className="inline-block font-mono text-sm tracking-[0.15em] uppercase border border-[#FAF4E6]/40 hover:bg-[#FAF4E6] hover:text-[#C84A31] transition-colors px-12 py-5 font-medium"
+                    <Link 
+                        href="/projetos" 
+                        className="inline-block mt-8 font-mono text-sm tracking-[0.1em] uppercase border border-osso text-osso py-4 px-10 hover:bg-osso hover:text-vinho transition-colors font-medium"
                     >
                         Ver projetos →
                     </Link>
