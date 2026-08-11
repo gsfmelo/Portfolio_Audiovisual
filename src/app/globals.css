@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  /* Suas cores do moodboard */
-  --color-osso: #FAF4E6;
-  --color-osso2: #F1E7D2;
+  /* Suas cores com o vermelho vivo e fundo mais claro */
+  --color-osso: #FCFBF8;
+  --color-osso2: #F2EFE8;
   --color-preto: #241D18;
-  --color-vinho: #C84A31;
+  --color-vinho: #C53015;
   --color-ambar: #C99A3E;
   --color-chumbo: #D98878;
 
-  /* Suas fontes */
-  --font-serif: "Fraunces", serif;
-  --font-mono: "JetBrains Mono", monospace;
-  --font-sans: "Instrument Sans", sans-serif;
+  /* Fontes conectadas diretamente, sem fallbacks duplicados */
+  --font-serif: var(--font-next-serif);
+  --font-mono: var(--font-next-mono);
+  --font-sans: var(--font-next-sans);
 }
 
 body {
@@ -21,23 +21,17 @@ body {
 }
 
 @layer base {
-
-  /* 1. Rolagem Suave (Smooth Scrolling) */
   html {
     scroll-behavior: smooth;
   }
 
-  /* 2. Destaque de Texto Personalizado (Selection Color) */
   ::selection {
-    background-color: #C84A31;
-    /* Fundo Terracota */
-    color: #FAF4E6;
-    /* Texto Marfim */
+    background-color: #C53015;
+    color: #FCFBF8;
   }
 
-  /* Suporte extra para navegadores Firefox */
   ::-moz-selection {
-    background-color: #C84A31;
-    color: #FAF4E6;
+    background-color: #C53015;
+    color: #FCFBF8;
   }
 }

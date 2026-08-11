@@ -25,9 +25,10 @@ function DivisorCategoria({ idx, texto, contagem }) {
 }
 
 // Subcomponente do Carrossel de Projetos (Com Autoplay)
+// Subcomponente do Carrossel de Projetos (Com Autoplay)
 function Carrossel({ projetos }) {
     const scrollRef = useRef(null);
-    const [isHovered, setIsHovered] = useState(false); // Estado para pausar o autoplay
+    const [isHovered, setIsHovered] = useState(false);
 
     const rolar = (direcao) => {
         if (scrollRef.current) {
@@ -36,7 +37,6 @@ function Carrossel({ projetos }) {
             const step = card ? card.offsetWidth + 1 : 400;
 
             if (direcao === 'dir') {
-                // Verifica se chegou no final. Se sim, volta pro começo (loop).
                 const isAtEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 10;
                 if (isAtEnd) {
                     track.scrollTo({ left: 0, behavior: 'smooth' });
@@ -49,16 +49,13 @@ function Carrossel({ projetos }) {
         }
     };
 
-    // Efeito de Autoplay: Rola para a direita a cada 4 segundos
     useEffect(() => {
         let intervalo;
         if (!isHovered) {
             intervalo = setInterval(() => {
                 rolar('dir');
-            }, 4000); // 4000ms = 4 segundos
+            }, 4000);
         }
-
-        // Limpa o intervalo quando o componente desmonta ou quando o mouse entra
         return () => clearInterval(intervalo);
     }, [isHovered]);
 
@@ -67,13 +64,13 @@ function Carrossel({ projetos }) {
     return (
         <div
             className="relative group/carousel"
-            onMouseEnter={() => setIsHovered(true)} // Pausa o autoplay
-            onMouseLeave={() => setIsHovered(false)} // Retoma o autoplay
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
         >
-            {/* Botão Anterior */}
+            {/* Botão Anterior (Subiu para 35% no mobile e fixado visível para toque) */}
             <button
                 onClick={() => rolar('esq')}
-                className="absolute top-1/2 -left-4 md:-left-6 -translate-y-1/2 w-14 h-14 rounded-full bg-osso border border-vinho text-vinho hover:bg-vinho hover:text-osso transition-colors flex items-center justify-center font-mono text-2xl z-10 opacity-0 group-hover/carousel:opacity-100 focus:opacity-100 shadow-md"
+                className="absolute top-[35%] md:top-1/2 -left-3 md:-left-6 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-osso border border-vinho text-vinho hover:bg-vinho hover:text-osso transition-colors flex items-center justify-center font-mono text-2xl z-10 opacity-100 md:opacity-0 group-hover/carousel:opacity-100 focus:opacity-100 shadow-md"
             >
                 ‹
             </button>
@@ -88,8 +85,8 @@ function Carrossel({ projetos }) {
                         key={proj.id}
                         className="car-card bg-osso flex flex-col md:grid md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr] gap-6 md:gap-8 p-6 md:p-8 snap-start shrink-0 basis-[85vw] md:basis-[600px] lg:basis-[700px]"
                     >
-                        {/* Pôster Maior */}
-                        <div className="aspect-[2/3] border border-dashed border-preto/30 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-osso2 to-osso relative overflow-hidden group">
+                        {/* Pôster Maior (Largura travada em 200px no mobile para manter proporção 2:3 sem estourar) */}
+                        <div className="w-[200px] sm:w-[240px] md:w-full mx-auto aspect-[2/3] border border-dashed border-preto/30 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-osso2 to-osso relative overflow-hidden group shrink-0">
                             {proj.imagem ? (
                                 <img src={proj.imagem} alt={proj.tituloNormal} className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" />
                             ) : (
@@ -114,15 +111,14 @@ function Carrossel({ projetos }) {
                                     {proj.sinopse}
                                 </p>
                             </div>
-{/* Rodapé do card dentro do Carrossel */}
+                            
+                            {/* Rodapé do card dentro do Carrossel */}
                             <div className="mt-6 pt-4 border-t border-preto/10">
                                 <div className="font-mono text-xs md:text-sm text-preto/60 uppercase tracking-widest">
                                     {proj.funcoes}
                                 </div>
                                 
-                                {/* Container para empilhar os links */}
                                 <div className="flex flex-col gap-2 mt-2">
-                                    {/* Link 1 (Sempre aparece) */}
                                     {proj.link && (
                                         <div className="font-mono text-xs md:text-sm text-[#C99A3E] font-medium hover:underline cursor-pointer tracking-widest">
                                             <a href={proj.link} target="_blank" rel="noopener noreferrer">
@@ -131,7 +127,6 @@ function Carrossel({ projetos }) {
                                         </div>
                                     )}
                                     
-                                    {/* Link 2 (Só aparece se você preencheu no projetos.js) */}
                                     {proj.link2 && (
                                         <div className="font-mono text-xs md:text-sm text-[#C99A3E] font-medium hover:underline cursor-pointer tracking-widest">
                                             <a href={proj.link2} target="_blank" rel="noopener noreferrer">
@@ -146,10 +141,10 @@ function Carrossel({ projetos }) {
                 ))}
             </div>
 
-            {/* Botão Próximo */}
+            {/* Botão Próximo (Subiu para 35% no mobile e fixado visível para toque) */}
             <button
                 onClick={() => rolar('dir')}
-                className="absolute top-1/2 -right-4 md:-right-6 -translate-y-1/2 w-14 h-14 rounded-full bg-osso border border-vinho text-vinho hover:bg-vinho hover:text-osso transition-colors flex items-center justify-center font-mono text-2xl z-10 opacity-0 group-hover/carousel:opacity-100 focus:opacity-100 shadow-md"
+                className="absolute top-[35%] md:top-1/2 -right-3 md:-right-6 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-osso border border-vinho text-vinho hover:bg-vinho hover:text-osso transition-colors flex items-center justify-center font-mono text-2xl z-10 opacity-100 md:opacity-0 group-hover/carousel:opacity-100 focus:opacity-100 shadow-md"
             >
                 ›
             </button>
