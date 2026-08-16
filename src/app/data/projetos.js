@@ -107,7 +107,7 @@ export const projetosAutoral = [
         tituloItalico: "",
         sinopse: <>Sinopse: Márcia passa mais uma noite em claro tentando vencer a insônia. À medida que o cansaço se acumula, sons inexplicáveis, a escuridão da casa e acontecimentos cada vez mais inquietantes fazem a fronteira entre realidade e imaginação se tornar incerta. Enquanto espera o amanhecer, ela precisa enfrentar os próprios medos e as consequências de uma mente à beira do colapso.<br /><br />Curta-Metragem universitário realizado para a disciplina de Direção. </>,
         funcoes: "direção, assist. de montagem e finalização",
-        link: "https://drive.google.com/file/d/1sACciKtBloNwgcr3t-hCfFly3PED6IE-/view",
+        link: "https://vimeo.com/1218695515?fl=tl&fe=ec ",
         imagem: "/insonia1.jpeg"
     },
     {
@@ -118,7 +118,7 @@ export const projetosAutoral = [
         tituloItalico: "Love",
         sinopse: "Vídeo-ensaio realizado para a disciplina de Cinema Musical. Trabalho que me possibilitou aprender edição/montagem de vídeos.",
         funcoes: "montagem",
-        link: "https://drive.google.com/file/d/1sACciKtBloNwgcr3t-hCfFly3PED6IE-/view",
+        link: "https://vimeo.com/1218702932?fl=tl&fe=ec ",
         imagem: "/love1.png"
     },
     {

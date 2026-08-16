@@ -37,7 +37,7 @@ export const metadata = {
     siteName: 'Portfólio Geovanna Melo',
     images: [
       {
-        url: '/ogimage.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Geovanna Melo Portfólio',
