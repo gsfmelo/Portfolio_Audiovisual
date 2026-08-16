@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Fundo escuro da película -->
+  <rect width="100" height="100" rx="12" fill="#241D18" />
+  
+  <!-- Tela Widescreen no centro -->
+  <rect x="10" y="25" width="80" height="50" fill="#FCFBF8" rx="2" />
+  
+  <!-- Furos superiores (Sprockets) -->
+  <rect x="15" y="8" width="12" height="8" fill="#FCFBF8" rx="1" />
+  <rect x="44" y="8" width="12" height="8" fill="#FCFBF8" rx="1" />
+  <rect x="73" y="8" width="12" height="8" fill="#FCFBF8" rx="1" />
+  
+  <!-- Furos inferiores (Sprockets) -->
+  <rect x="15" y="84" width="12" height="8" fill="#FCFBF8" rx="1" />
+  <rect x="44" y="84" width="12" height="8" fill="#FCFBF8" rx="1" />
+  <rect x="73" y="84" width="12" height="8" fill="#FCFBF8" rx="1" />
+</svg>

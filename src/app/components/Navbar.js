@@ -48,16 +48,16 @@ export default function Navbar() {
                     </div>
                     <div className="flex flex-col gap-8 font-serif text-3xl sm:text-4xl">
                         <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-vinho transition-colors">
-                            home <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/home</span>
+                            home
                         </Link>
                         <Link href="/projetos" onClick={() => setIsOpen(false)} className="hover:text-vinho transition-colors">
-                            projetos <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/ projetos</span>
+                            projetos
                         </Link>
                         <Link href="/sobre" onClick={() => setIsOpen(false)} className="hover:text-vinho transition-colors">
-                            sobre <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/sobre</span>
+                            sobre
                         </Link>
                         <Link href="/contato" onClick={() => setIsOpen(false)} className="hover:text-vinho transition-colors">
-                            contato <span className="font-mono text-xs text-vinho tracking-widest block mt-1.5">/contato</span>
+                            contato
                         </Link>
                     </div>
                 </div>

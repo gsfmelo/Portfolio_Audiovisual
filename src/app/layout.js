@@ -33,11 +33,11 @@ export const metadata = {
   openGraph: {
     title: 'Geovanna Melo — Realizadora Audiovisual e Editora de Vídeo',
     description: 'Do cinema à criação de conteúdo para marcas. Conheça a mostra completa de trabalhos e trajetória.',
-    url: 'https://seusite.com.br', 
+    url: 'https://geovannamelo.vercel.app', 
     siteName: 'Portfólio Geovanna Melo',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/ogimage.png',
         width: 1200,
         height: 630,
         alt: 'Geovanna Melo Portfólio',

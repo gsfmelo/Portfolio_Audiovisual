@@ -58,12 +58,18 @@ export default function DiferencialTech() {
           </div>
         </div>
 
-        {/* Botão "Em Breve" mais sutil */}
+        {/* Link para o Portfólio Tech (Substituindo o botão "em breve") */}
         <div className="shrink-0 w-full md:w-auto flex justify-start md:justify-end">
-          <div className="font-mono text-xs uppercase tracking-[0.2em] text-preto/50 border border-preto/15 bg-transparent px-6 py-3 whitespace-nowrap flex items-center gap-2 select-none hover:text-vinho hover:border-vinho/30 transition-colors">
-            <span>em breve</span>
-            <span className="animate-pulse">_</span>
-          </div>
+          <a 
+            href="https://geovannamelotech.vercel.app" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="font-mono text-xs uppercase tracking-[0.2em] text-preto/70 border border-preto/15 bg-transparent px-6 py-3 whitespace-nowrap flex items-center gap-2 select-none hover:text-vinho hover:border-vinho/30 hover:bg-preto/5 transition-all cursor-pointer"
+          >
+            <span>Acessar Portfólio Tech</span>
+            {/* Mantive o underline piscando como detalhe visual */}
+            <span className="animate-pulse text-[#C99A3E]">_</span> 
+          </a>
         </div>
 
       </div>

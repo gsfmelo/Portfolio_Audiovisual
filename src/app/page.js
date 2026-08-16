@@ -37,7 +37,7 @@ export default function Home() {
                 Ver Projetos
               </Link>
               <a
-                href="/Curriculo - Geovanna Melo.pdf"
+                href="/curriculo-geovannamelo.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block font-mono text-xs md:text-sm tracking-[0.1em] uppercase border border-preto/20 text-preto py-3.5 px-8 hover:border-preto hover:text-vinho transition-colors text-center"
