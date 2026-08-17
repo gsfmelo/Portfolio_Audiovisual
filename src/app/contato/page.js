@@ -38,12 +38,13 @@ export default function Contato() {
   };
 
   return (
-    <main className="min-h-screen px-[6vw] md:px-[8vw] py-16 md:py-24 relative z-10 flex flex-col bg-osso">
+    // Removido o min-h-screen — ele forçava a página a ter no mínimo 100vh de altura,
+    // e como o conteúdo da Contato é curto, sobrava um vão vazio até o rodapé aparecer.
+    <main className="px-[6vw] md:px-[8vw] py-16 md:py-24 relative z-10 flex flex-col bg-osso">
       {/* Efeito de ruído global */}
       <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.04] mix-blend-multiply bg-[url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%22120%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')]"></div>
 
       <FadeIn>
-        {/* Removido o mt-10/mt-16 — a section já tem py-16/py-24, os dois somados criavam o vão gigante no topo */}
         <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-start">
 
           {/* LADO ESQUERDO: TEXTOS */}
@@ -66,7 +67,6 @@ export default function Contato() {
                 </a>
               </div>
               <div>
-                {/* Removido o mt-4 solto — era o que desalinhava esse label em relação ao "E-mail" */}
                 <span className="font-mono text-xs uppercase tracking-widest text-preto/50 block mb-2 font-bold">Redes e Conexões</span>
                 {/* BOTÕES SOCIAIS UNIFICADOS E COESOS */}
                 <div className="flex flex-wrap gap-3 mt-1">
@@ -94,9 +94,6 @@ export default function Contato() {
           </div>
 
           {/* LADO DIREITO: O FORMULÁRIO ENXUTO E COESO */}
-          {/* Trocado justify-center por justify-start e removido min-h-[480px] + lg:mt-4 —
-              era isso que criava o respiro desproporcional em cima/embaixo e descolava
-              o card da coluna de texto ao lado */}
           <div className="relative bg-white border border-preto/10 p-8 md:p-10 shadow-xl overflow-hidden flex flex-col justify-start">
 
             {/* ANIMAÇÃO DE SUCESSO (FADE TO BLACK) */}
