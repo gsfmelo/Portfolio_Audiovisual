@@ -99,19 +99,19 @@ export default function Home() {
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex items-center whitespace-nowrap">
               <span className="font-mono text-[10px] md:text-xs tracking-[0.2em] uppercase mx-8">Miss Universe PE</span>
-              <span className="text-[#C99A3E] text-sm md:text-base mx-2">✦</span>
+              <span className="text-ambar text-sm md:text-base mx-2">✦</span>
               <span className="font-mono text-[10px] md:text-xs tracking-[0.2em] uppercase mx-8">Falcor Travels</span>
-              <span className="text-[#C99A3E] text-sm md:text-base mx-2">✦</span>
+              <span className="text-ambar text-sm md:text-base mx-2">✦</span>
               <span className="font-mono text-[10px] md:text-xs tracking-[0.2em] uppercase mx-8">Viajar Para Itália</span>
-              <span className="text-[#C99A3E] text-sm md:text-base mx-2">✦</span>
+              <span className="text-ambar text-sm md:text-base mx-2">✦</span>
               <span className="font-mono text-[10px] md:text-xs tracking-[0.2em] uppercase mx-8">Secretariado do Brasil</span>
-              <span className="text-[#C99A3E] text-sm md:text-base mx-2">✦</span>
+              <span className="text-ambar text-sm md:text-base mx-2">✦</span>
               <span className="font-mono text-[10px] md:text-xs tracking-[0.2em] uppercase mx-8">Pleno Treinamentos</span>
-              <span className="text-[#C99A3E] text-sm md:text-base mx-2">✦</span>
+              <span className="text-ambar text-sm md:text-base mx-2">✦</span>
               <span className="font-mono text-[10px] md:text-xs tracking-[0.2em] uppercase mx-8">Secretaria da Educação da Prefeitura do Recife</span>
-              <span className="text-[#C99A3E] text-sm md:text-base mx-2">✦</span>
+              <span className="text-ambar text-sm md:text-base mx-2">✦</span>
               <span className="font-mono text-[10px] md:text-xs tracking-[0.2em] uppercase mx-8">TV Universitária Recife</span>
-              <span className="text-[#C99A3E] text-sm md:text-base mx-2">✦</span>
+              <span className="text-ambar text-sm md:text-base mx-2">✦</span>
             </div>
           ))}
         </div>
@@ -129,14 +129,16 @@ export default function Home() {
             </div>
             <Link
               href="/projetos"
-              className="font-mono text-sm text-[#C99A3E] hover:text-vinho hover:underline tracking-widest uppercase"
+              className="font-mono text-sm text-ambar hover:text-vinho hover:underline tracking-widest uppercase"
             >
               Ver todos os projetos →
             </Link>
           </div>
 
           <div className="px-[6vw] md:px-[8vw]">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-preto/15 border border-preto/15">
+            {/* Trocado lg:grid-cols-2 por md:grid-cols-2 — mesma inconsistência de breakpoint
+                corrigida na página de Projetos, pra tablet já aproveitar a largura */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-preto/15 border border-preto/15">
               {projetosDestaque && projetosDestaque.map((proj) => (
                 <div key={proj.id} className="bg-osso flex flex-col gap-5 p-6 md:p-8 h-full transition-colors hover:bg-osso/80">
 
@@ -171,7 +173,10 @@ export default function Home() {
                     </h3>
                     
                     {/* Funções e Link presos no rodapé da caixa */}
-                    <div className="mt-auto pt-6 flex items-center justify-between gap-4">
+                    {/* Adicionado flex-wrap como rede de segurança: em telas muito estreitas
+                        (tipo 375px), a função quebra pra linha de baixo em vez de espremer
+                        contra o link "[ ver projeto ]" */}
+                    <div className="mt-auto pt-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
                       <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-preto/60">
                         {proj.funcoes}
                       </span>
@@ -179,7 +184,7 @@ export default function Home() {
                         href={proj.link} 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="font-mono text-[10px] text-[#C99A3E] uppercase tracking-widest font-medium hover:underline whitespace-nowrap"
+                        className="font-mono text-[10px] text-ambar uppercase tracking-widest font-medium hover:underline whitespace-nowrap"
                       >
                         [ ver projeto ]
                       </a>
@@ -196,7 +201,7 @@ export default function Home() {
       {/* 3. SNEAK PEEK SOBRE */}
       <FadeIn>
         <section className="py-24 px-[6vw] md:px-[8vw] flex flex-col items-center text-center">
-          <span className="font-mono text-sm tracking-[0.15em] uppercase text-[#C99A3E] mb-6 block font-medium">Visão & Trajetória</span>
+          <span className="font-mono text-sm tracking-[0.15em] uppercase text-ambar mb-6 block font-medium">Visão & Trajetória</span>
           <h2 className="font-serif font-normal text-[clamp(32px,5vw,56px)] leading-tight max-w-[800px] text-preto mb-8">
             Um repertório, várias formas de <i className="italic font-light text-vinho">pensar.</i>
           </h2>
@@ -213,10 +218,11 @@ export default function Home() {
         </section>
       </FadeIn>
 
-      {/* 4. CTA FINAL */}
-{/* 4. CTA FINAL (PADRONIZADO) */}
+      {/* 4. CTA FINAL (PADRONIZADO) */}
       <FadeIn>
-        <section className="bg-vinho text-osso flex flex-col items-center justify-center text-center py-24 md:py-32 px-[6vw] md:px-[8vw] mt-10">
+        {/* Removido o mt-10 — a seção anterior já tem seu próprio padding vertical,
+            somar mt-10 criava um salto maior que a transição entre as outras seções */}
+        <section className="bg-vinho text-osso flex flex-col items-center justify-center text-center py-24 md:py-32 px-[6vw] md:px-[8vw]">
 
           <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] mb-6 opacity-90">
             <span className="w-1.5 h-1.5 rounded-full bg-osso"></span>

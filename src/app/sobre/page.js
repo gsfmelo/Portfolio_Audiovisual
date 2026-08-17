@@ -34,9 +34,11 @@ export default function Sobre() {
             <FadeIn><Personalidade /></FadeIn>
 
             {/* 7. FECHAMENTO CTA BANNER */}
-{/* 7. FECHAMENTO CTA BANNER */}
             <FadeIn>
-                <div className="bg-vinho text-osso text-center py-24 md:py-32 px-[8vw] mt-10">
+                {/* Removido o mt-10 — mesma correção aplicada na Home e em Projetos:
+                    a seção anterior (Personalidade) já deve ter seu próprio padding vertical,
+                    somar mt-10 aqui criava um salto maior que a transição entre as outras seções */}
+                <div className="bg-vinho text-osso text-center py-24 md:py-32 px-[8vw]">
                     <h2 className="font-serif italic font-normal text-[clamp(32px,5vw,52px)]">
                         Já viu os meus trabalhos?
                     </h2>

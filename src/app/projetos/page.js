@@ -16,7 +16,7 @@ import {
 function DivisorCategoria({ idx, texto, contagem }) {
     return (
         <div className="flex items-baseline gap-4 px-[6vw] md:px-[8vw]">
-            <span className="font-mono text-sm md:text-base text-[#C99A3E]">{idx}</span>
+            <span className="font-mono text-sm md:text-base text-ambar">{idx}</span>
             <span className="font-serif italic font-normal text-xl md:text-2xl text-preto/60 whitespace-nowrap">{texto}</span>
             <div className="flex-1 h-px bg-preto/15"></div>
             <span className="font-mono text-xs md:text-sm text-preto/40">{contagem}</span>
@@ -24,7 +24,6 @@ function DivisorCategoria({ idx, texto, contagem }) {
     );
 }
 
-// Subcomponente do Carrossel de Projetos (Com Autoplay)
 // Subcomponente do Carrossel de Projetos (Com Autoplay)
 function Carrossel({ projetos }) {
     const scrollRef = useRef(null);
@@ -120,7 +119,7 @@ function Carrossel({ projetos }) {
                                 
                                 <div className="flex flex-col gap-2 mt-2">
                                     {proj.link && (
-                                        <div className="font-mono text-xs md:text-sm text-[#C99A3E] font-medium hover:underline cursor-pointer tracking-widest">
+                                        <div className="font-mono text-xs md:text-sm text-ambar font-medium hover:underline cursor-pointer tracking-widest">
                                             <a href={proj.link} target="_blank" rel="noopener noreferrer">
                                                 {proj.textoLink || "[ ver projeto ]"}
                                             </a>
@@ -128,7 +127,7 @@ function Carrossel({ projetos }) {
                                     )}
                                     
                                     {proj.link2 && (
-                                        <div className="font-mono text-xs md:text-sm text-[#C99A3E] font-medium hover:underline cursor-pointer tracking-widest">
+                                        <div className="font-mono text-xs md:text-sm text-ambar font-medium hover:underline cursor-pointer tracking-widest">
                                             <a href={proj.link2} target="_blank" rel="noopener noreferrer">
                                                 {proj.textoLink2 || "[ ver projeto 2 ]"}
                                             </a>
@@ -175,7 +174,10 @@ export default function Projetos() {
             <FadeIn>
                 <DivisorCategoria idx="01" texto="em destaque" contagem="2 trabalhos" />
                 <section className="pt-8 pb-20 px-[6vw] md:px-[8vw]">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-preto/15 border border-preto/15">
+                    {/* Trocado lg:grid-cols-2 por md:grid-cols-2 — antes essa seção (a mais importante,
+                        é a primeira que a pessoa vê) ficava empilhada em coluna única no tablet,
+                        enquanto os carrosséis logo abaixo já usavam a largura toda a partir do md */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-preto/15 border border-preto/15">
                         {projetosDestaque && projetosDestaque.map((proj) => (
                             <div key={proj.id} className="bg-osso flex flex-col gap-5 p-6 md:p-8 h-full">
                                 
@@ -211,7 +213,6 @@ export default function Projetos() {
                                         {proj.tituloNormal} <i className="text-vinho font-light">{proj.tituloItalico}</i>
                                     </h3>
                                     
-                                    {/* Funções e Link presos no rodapé da caixa */}
                                     {/* Funções e Links presos no rodapé da caixa */}
                                     <div className="mt-auto pt-6 flex items-end justify-between gap-4">
                                     <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-preto/60">
@@ -226,7 +227,7 @@ export default function Projetos() {
                                             href={proj.link} 
                                             target="_blank" 
                                             rel="noopener noreferrer" 
-                                            className="font-mono text-[10px] text-[#C99A3E] uppercase tracking-widest font-medium hover:underline whitespace-nowrap"
+                                            className="font-mono text-[10px] text-ambar uppercase tracking-widest font-medium hover:underline whitespace-nowrap"
                                         >
                                             {proj.textoLink || "[ ver projeto ]"}
                                         </a>
@@ -238,7 +239,7 @@ export default function Projetos() {
                                             href={proj.link2} 
                                             target="_blank" 
                                             rel="noopener noreferrer" 
-                                            className="font-mono text-[10px] text-[#C99A3E] uppercase tracking-widest font-medium hover:underline whitespace-nowrap"
+                                            className="font-mono text-[10px] text-ambar uppercase tracking-widest font-medium hover:underline whitespace-nowrap"
                                         >
                                             {proj.textoLink2 || "[ ver projeto 2 ]"}
                                         </a>
@@ -291,7 +292,9 @@ export default function Projetos() {
 
             {/* CTA FINAL */}
             <FadeIn>
-                <div className="bg-vinho text-osso text-center py-24 md:py-32 px-[8vw] mt-10">
+                {/* Removido o mt-10 — a seção de Colaborações logo acima já termina com pb-20,
+                    somar mt-10 criava um vão bem maior que a transição entre as outras seções */}
+                <div className="bg-vinho text-osso text-center py-24 md:py-32 px-[8vw]">
                     <h2 className="font-serif italic font-normal text-[clamp(32px,5vw,52px)]">Gostou do que viu?</h2>
                     <Link href="/contato" className="inline-block mt-8 font-mono text-sm tracking-[0.1em] uppercase border border-osso text-osso py-4 px-10 hover:bg-osso hover:text-vinho transition-colors font-medium">
                         Vamos conversar →
