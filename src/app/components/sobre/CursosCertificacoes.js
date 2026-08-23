@@ -1,5 +1,11 @@
 export default function CursosCertificacoes() {
   const cursos = [
+        {
+      ano: "2026",
+      instituicao: "FERA Audiovisual",
+      curso: "Oficina de Montagem",
+      tipo: "audiovisual"
+    },
     {
       ano: "2025",
       instituicao: "Vitrine Filmes",
