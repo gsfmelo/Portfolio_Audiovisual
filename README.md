@@ -1,6 +1,6 @@
 # Geovanna Melo | Portfólio Audiovisual 🎬
 
-![Geovanna Melo Portfolio](public/og-image.jpg)
+![Geovanna Melo Portfolio](public/og-image.png)
 
 > Um portfólio digital desenvolvido sob medida para materializar minha sensibilidade artística combinada a meu flerte com a tecnologia.
 
